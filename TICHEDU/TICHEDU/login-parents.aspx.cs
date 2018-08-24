@@ -48,12 +48,15 @@ public partial class login_teacher : System.Web.UI.Page
             SqlDataReader sdr = cmd.ExecuteReader();
             if (sdr.Read())
             {
-
-                userid = sdr["PARENT_ID"].ToString();
-
+                String studentemail;
+                userid = sdr["PARENT_ID"].ToString(); 
+                studentemail = sdr["STUDENT_EMAIL"].ToString();
+                Session["studentemail"] = studentemail;
                 Response.Redirect("parentdash.aspx?teacher=" + userid);
                 Session["userid"] = userid;
                 
+
+
             }
             else
             {

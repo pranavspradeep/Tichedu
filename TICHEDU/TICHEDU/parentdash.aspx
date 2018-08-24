@@ -147,6 +147,7 @@
 								<img src="images/logo.png" alt="">
 							</a>	
 								<ul class="nav menu-click">
+                                    <li> <asp:LinkButton ID="Student_Recent_Activity"  OnClick="Student_Recent_Activity_Click" runat="server">Recent Student Activities</asp:LinkButton></li>
 									<!--<li >
 								   
 									 <asp:LinkButton ID="Pdfnoteslink_btn"  OnClick="Pdfnoteslink_btn_Click" runat="server">Pdf Notes</asp:LinkButton>
@@ -297,8 +298,38 @@
 
 
 			<section class="ls page_portfolio section_padding_top_10 section_padding_bottom_75">
-				
-             
+                <div class="container">
+<h3 class="h3">Student Recent Activities</h3>				
+<asp:DataList ID="StudentActivity_Tbl" runat="server">
+    <HeaderTemplate>
+        <table class="table table-hover  tbody tr:hover td {
+    background:red;
+} ">
+                <thead>
+    <tr>
+      <th style="background-color:#ff0000">DATE</th>
+      <th  style="background-color:#ff0000">VISITED CLASS</th>
+      <th   style="background-color:#ff0000">VISITED SUBJECTS</th>
+    </tr>
+  </thead>
+  <tbody>
+    </HeaderTemplate>
+    <ItemTemplate>
+        <tr class="bg-primary">
+      <td style="color:black"><%# Eval("Date_time") %></td>    
+      <td style="color:black"><%# Eval("Std_visited_class") %></td>
+      <td style="color:black"><%# Eval("Std_visited_subject") %></td>
+    </tr>
+    </ItemTemplate>
+    <FooterTemplate>
+        </tbody>
+                </table>
+    </FooterTemplate>
+</asp:DataList>
+    
+    
+  
+             </div>
         
                   <!--  <asp:DataList ID="DataListvideo" runat="server" cssClass="row" RepeatLayout="Flow" RepeatDirection="Horizontal">
                           <ItemTemplate>

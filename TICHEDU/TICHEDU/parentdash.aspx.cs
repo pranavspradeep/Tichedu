@@ -43,7 +43,7 @@ public partial class parentdash : System.Web.UI.Page
 
 
     public string userkey { set; get; }
-
+   public string studentemail;
     public string code { set; get; }
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -53,8 +53,9 @@ public partial class parentdash : System.Web.UI.Page
 
         userkey = Request.QueryString["teacher"];
 
-
-
+        studentemail = Session["studentemail"].ToString();
+       
+       
         if (!IsPostBack)
         {
             if (Request.QueryString["code"] != null)
@@ -77,15 +78,43 @@ public partial class parentdash : System.Web.UI.Page
             }
         }
 
-        
-      
 
-          
-            
-        
+        studenttrackerdetails(studentemail);
 
-        BindDataList(userkey);
+
+
+
+
+      //  BindDataList(userkey);
+
+
+
     }
+
+    public void studenttrackerdetails(string studentemail)
+    {
+        string strConnString = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
+        using (SqlConnection con = new SqlConnection(strConnString))
+        {
+            using (SqlCommand cmd = new SqlCommand())
+            {
+
+                cmd.CommandText = " select t1.STUDENT_ID,t3.Date_time,t3.Std_visited_class,t3.Std_visited_subject from TBL_STUDENT_REGISTRATION  t1 ,TBL_PARENT_REGISTRATION t2,StudentActTrack t3  where t1.STUDENT_EMAIL= @studentemail and t3.Std_Id=t1.STUDENT_ID ORDER BY Date_time DESC";
+
+
+                cmd.Parameters.AddWithValue("@studentemail", studentemail);
+                cmd.Connection = con;
+                con.Open();
+                StudentActivity_Tbl.DataSource = cmd.ExecuteReader();
+                StudentActivity_Tbl.DataBind();
+                con.Close();
+            }
+        }
+
+
+    }
+
+
     public void GetToken(string code)
     {
 
@@ -207,5 +236,11 @@ public partial class parentdash : System.Web.UI.Page
     {   
             Response.Redirect("Youtubevideosupload-listing.aspx/?teacher=" + userkey);
         
+    }
+
+    protected void Student_Recent_Activity_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("parentdash.aspx/?teacher=" + userkey);
+
     }
 }
