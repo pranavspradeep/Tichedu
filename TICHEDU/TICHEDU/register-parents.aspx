@@ -106,7 +106,7 @@
 
 						<div class="col-md-12 to_animate" data-animation="scaleAppear">
                              <asp:HyperLink ID="sucess" NavigateUrl="~/login-parents.aspx" runat="server" ForeColor="Red">REGISTRATION SUCESSFULL "CLICK TO LOGIN"</asp:HyperLink>
-                            <asp:Label ID="errormsg" runat="server" Text=""></asp:Label>  
+                            <asp:Label ID="errormsg" ForeColor="Red" runat="server" Text=""></asp:Label>  
 							<h3>Parent Registration</h3>
                            
 							<form class="contact-form row columns_padding_10" method="post" action="#">

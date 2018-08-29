@@ -44,7 +44,8 @@ using System.Web.UI.WebControls;
                 if (studentemailverify == null)
                 {
                     errormsg.Visible = true;
-                    errormsg.Text = "Student Email Not registered";
+                    
+                    errormsg.Text = "Student Email Not Registered";
                 }
                 else
                 {
