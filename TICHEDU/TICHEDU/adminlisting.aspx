@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="admin.aspx.cs" Inherits="admin" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="adminlisting.aspx.cs" Inherits=" admin_listng"%>
 
 
 <!DOCTYPE html>
@@ -108,6 +107,7 @@
 					  <div class="col-sm-6 text-center text-sm-right">
 							<ul class="inline-list menu darklinks">
                                 <h2>TichEdu Admin Panel</h2>
+                              
 							<!--	<li>
 									<a href="#"><i class="fa fa-file"></i> My Content</a>
 								</li>
@@ -151,10 +151,13 @@
 								<img src="images/logo.png" alt="">
 							</a>	
 								<ul class="nav menu-click">
-									<li class="active">
+                                    <li>    
+                                        
+                                    </li>
+										<!--<li class="active">
 								   
 								
-								<!--			</li>
+										</li>
 
 									<li>
                                     
@@ -295,60 +298,169 @@
 				</div>
 			</header>
 
-            <form runat="server">
-  <div class="container">
-      <div style="margin-top:10px">
-          <asp:Button ID="listing" runat="server" Text="Go to list" OnClick="listing_Click"/></div>
-                <div class="row">
+        <form runat="server">
+                <div class="container">
+                    <div style="margin-top:10px">
+                      <asp:Button ID="ADD_btn" runat="server" Text="Add Subject,Class,Exam name,Subject&Class" OnClick="ADD_btn_Click"/>
+                        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Signout" />
+                   
+                        </div>
+                        <div class="row">
   <div class="col-sm-6">
     <div class="card ">
       <div class="card-body">
-        <h5 class="card-title text-danger ">Create class</h5>
-     
-        <asp:TextBox ID="class_txtbox" CssClass="form-control" runat="server"></asp:TextBox>
-      <div style="margin-top:10px"> <asp:Button  ID="Class_btn" CssClass="form-control" runat="server" Text="Create class" onclick="Class_btn_Click" /></div> <asp:Label ID="suc_msg_label" runat="server" Text=""></asp:Label>
-         
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card  ">
-      <div class="card-body">
-        <h5 class="card-title text-danger">Create subject</h5>
-        <asp:TextBox ID="Sub_txtbox" CssClass="form-control" runat="server"></asp:TextBox>
-        <div style="margin-top:10px">   <asp:Button ID="sub_btn" CssClass="form-control" runat="server" Text="Create subject" OnClick="sub_btn_Click" /></div> <asp:Label ID="MSG1" runat="server" Text=""></asp:Label>
-        
+          <h4><b>Class Listing</b></h4>
+        <asp:DataList ID="StudentActivity_Tbl" runat="server" OnDeleteCommand="StudentActivity_Tbl_DeleteCommand" DataKeyField="Classid">
+    <HeaderTemplate>
+        <table class="table table-hover  tbody tr:hover td {
+    background:red;
+} ">
+                <thead>
+    <tr>
+      <th style="background-color:#ff0000">CLASS ID</th>
+      <th  style="background-color:#ff0000"> CLASS</th>
+        <th  style="background-color:#ff0000"> ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    </HeaderTemplate>
+    <ItemTemplate>
+        <tr class="bg-primary">
+      <td style="color:black"><%# Eval("Classid") %></td>    
+      <td style="color:black"><%# Eval("Class") %></td>
+        <td><asp:Button ID="delete_btn" CommandName="delete" runat="server" Text="Delete" /></td>    
+    </tr>
+    </ItemTemplate>
+    <FooterTemplate>
+        </tbody>
+                </table>
+    </FooterTemplate>
+</asp:DataList>
       </div>
     </div>
   </div>
 
   <div class="col-sm-6">
-    <div class="card">
+    <div class="card ">
       <div class="card-body">
-        
-                <p class="text-danger">Add class with subject </p>
-        <p class="text-primary">Select class</p>
-        <asp:DropDownList ID="classdrop" CssClass="form-control" runat="server" OnSelectedIndexChanged="classdrop_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
-         <p class="text-primary"> Select Subject</p>  
-                <asp:DropDownList ID="subjectdrop" CssClass="form-control" runat="server"></asp:DropDownList>
-            <div style="margin-top:10px"><asp:Button ID="addclasssubj" CssClass="form-control" runat="server" Text="Add class with subject" onclick="addclasssubj_Click" />  </div> <asp:Label ID="MSG2" runat="server" Text=""></asp:Label>
-
+          <h4><b>Subject Listing</b></h4>
+        <asp:DataList ID="subjectlist" runat="server" OnDeleteCommand="subjectlist_DeleteCommand" DataKeyField="Subject_id">
+    <HeaderTemplate>
+        <table class="table table-hover  tbody tr:hover td {
+    background:red;
+} ">
+                <thead>
+    <tr>
+      <th style="background-color:#ff0000">SUBJECT ID</th>
+      <th  style="background-color:#ff0000"> SUBJECT</th>
+     <th  style="background-color:#ff0000"> ACTION</th>    
+    </tr>
+  </thead>
+  <tbody>
+    </HeaderTemplate>
+    <ItemTemplate>
+        <tr class="bg-primary">
+      <td style="color:black"><%# Eval("Subject_id") %></td>    
+      <td style="color:black"><%# Eval("Subject") %></td>
+             <td><asp:Button ID="delete_btn" CommandName="delete" runat="server" Text="Delete" /></td>    
+  
+    </tr>
+    </ItemTemplate>
+    <FooterTemplate>
+        </tbody>
+                </table>
+    </FooterTemplate>
+</asp:DataList>
       </div>
     </div>
   </div>
 
-                     <div class="col-sm-6">
-    <div class="card">
+
+
+  <div class="col-sm-6">
+    <div class="card ">
       <div class="card-body">
-                        <p class="text-danger">Create exam name</p>
-        <asp:TextBox ID="exam_txybox" CssClass="form-control" runat="server"></asp:TextBox>
-      <div style="margin-top:10px"><asp:Button ID="exam" CssClass="form-control" runat="server" Text="Create exam" OnClick="exam_Click"/></div>  <asp:Label ID="MSG3" runat="server" Text=""></asp:Label>
-      
+          <h4><b>Class Subject Listing</b></h4>
+        <asp:DataList ID="classsublist" runat="server"  OnDeleteCommand="classsublist_DeleteCommand" DataKeyField="Class_subject_id" >
+    <HeaderTemplate>
+        <table class="table table-hover  tbody tr:hover td {
+    background:red;
+} ">
+                <thead>
+    <tr>
+      <th style="background-color:#ff0000">CLASS SUBJECT ID</th>
+      <th  style="background-color:#ff0000"> SUBJECT</th>
+           <th  style="background-color:#ff0000"> CLASS</th>
+    <th  style="background-color:#ff0000"> ACTION</th>    
+    </tr>
+  </thead>
+  <tbody>
+    </HeaderTemplate>
+    <ItemTemplate>
+        <tr class="bg-primary">
+      <td style="color:black"><%# Eval("Class_subject_id") %></td>    
+      <td style="color:black"><%# Eval("Subject") %></td>
+            <td style="color:black"><%# Eval("class") %></td>
+   <td><asp:Button ID="delete_btn" CommandName="delete" runat="server" Text="Delete" /></td>    
+   
+    </tr>
+    </ItemTemplate>
+    <FooterTemplate>
+        </tbody>
+                </table>
+    </FooterTemplate>
+</asp:DataList>
       </div>
     </div>
   </div>
-</div>
+
+
+
+  <div class="col-sm-6">
+    <div class="card ">
+      <div class="card-body">
+          <h4><b>Exam name Listing</b></h4>
+        <asp:DataList ID="examnanelist" runat="server" OnDeleteCommand="examnanelist_DeleteCommand" DataKeyField ="Exam_name_id">
+    <HeaderTemplate>
+        <table class="table table-hover  tbody tr:hover td {
+    background:red;
+} ">
+                <thead>
+    <tr>
+      <th style="background-color:#ff0000">EXAM ID</th>
+      <th  style="background-color:#ff0000"> EXAM NAME</th>
+        <th  style="background-color:#ff0000"> ACTION</th>    
+    
+    </tr>
+  </thead>
+  <tbody>
+    </HeaderTemplate>
+    <ItemTemplate>
+        <tr class="bg-primary">
+      <td style="color:black"><%# Eval("Exam_name_id") %></td>    
+      <td style="color:black"><%# Eval("Exam_name") %></td>
+        <td >
+         <td><asp:Button ID="delete_btn" CommandName="delete" runat="server" Text="Delete" /></td>    
+   
+   
+    </tr>
+    </ItemTemplate>
+    <FooterTemplate>
+        </tbody>
+                </table>
+    </FooterTemplate>
+</asp:DataList>
       </div>
+    </div>
+  </div>
+
+                   
+
+
+
+                </div>
+                    </div>
+  
           </form>  
 
        

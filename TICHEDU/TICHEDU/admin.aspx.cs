@@ -218,4 +218,9 @@ public partial class admin : System.Web.UI.Page
         con.Close();
         subjectdrop.Items.Insert(0, new ListItem("Select", "NA"));
     }
+
+    protected void listing_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("adminlisting.aspx");
+    }
 }
