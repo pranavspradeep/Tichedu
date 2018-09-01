@@ -12,7 +12,7 @@ using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class student : System.Web.UI.Page
+public partial class teachergroupchat : System.Web.UI.Page
 {
     public string userkey { set; get; }
     string clientid = "556887803694-s1iakv1ep16bgvupkp3suh2jc549922j.apps.googleusercontent.com";
@@ -42,9 +42,9 @@ public partial class student : System.Web.UI.Page
     string strConnString = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
     protected void Page_Load(object sender, EventArgs e)
     {
-        userkey = Request.QueryString["student"];
-        profilepic.Visible = false;
-        username.Visible = false;
+        userkey = Request.QueryString["teacher"];
+      //  profilepic.Visible = false;
+       // username.Visible = false;
         if (!Page.IsPostBack)
         {
             filldropdownclass();
@@ -54,11 +54,11 @@ public partial class student : System.Web.UI.Page
                 if (Request.QueryString["code"] != null)
                 {
                     GetToken(Request.QueryString["code"].ToString());
-                    profilepic.Visible = true;
-                    username.Visible = true;
+                  //  profilepic.Visible = true;
+                   // username.Visible = true;
 
-                    profilepic.ImageUrl = Session["profilepicture"].ToString();
-                    username.Text = Session["username"].ToString();
+                  //  profilepic.ImageUrl = Session["profilepicture"].ToString();
+//username.Text = Session["username"].ToString();
                 }
             }
         }
@@ -128,12 +128,12 @@ public partial class student : System.Web.UI.Page
                 cmd.CommandText = "SELECT VIDEO_ID, VIDE0_TITLE,VIDEO_SUBJECT FROM TBL_VIDEO_UPLOAD WHERE VIDEO_UPLOAD_TYPE ='TEACHER' and VIDEO_FOR_CLASS=@class and VIDEO_SUBJECT=@subject ";
                 double I = Convert.ToDouble(userkey);
                 // cmd.Parameters.AddWithValue("@Id", I);
-                cmd.Parameters.AddWithValue("@class", classdrop.Text);
-                cmd.Parameters.AddWithValue("@subject", subjectdrop.Text);
+               // cmd.Parameters.AddWithValue("@class", classdrop.Text);
+               // cmd.Parameters.AddWithValue("@subject", subjectdrop.Text);
                 cmd.Connection = con;
                 con.Open();
-                DataList1.DataSource = cmd.ExecuteReader();
-                DataList1.DataBind();
+              //  DataList1.DataSource = cmd.ExecuteReader();
+               // DataList1.DataBind();
                 con.Close();
             }
         }
@@ -149,13 +149,13 @@ public partial class student : System.Web.UI.Page
         SqlDataAdapter da = new SqlDataAdapter(com);
         DataSet ds = new DataSet();
         da.Fill(ds);  // fill dataset
-        classdrop.DataTextField = ds.Tables[0].Columns["Class"].ToString(); // text field name of table dispalyed in dropdown
+       // classdrop.DataTextField = ds.Tables[0].Columns["Class"].ToString(); // text field name of table dispalyed in dropdown
                                                                             //subjectdrop.DataTextField = ds.Tables[0].Columns["Subject"].ToString();             // to retrive specific  textfield name 
-        classdrop.DataSource = ds.Tables[0];      //assigning datasource to the dropdownlist
-        classdrop.DataBind();  //binding dropdownlist
+       // classdrop.DataSource = ds.Tables[0];      //assigning datasource to the dropdownlist
+//classdrop.DataBind();  //binding dropdownlist
 
         con.Close();
-        classdrop.Items.Insert(0, new ListItem("Select", "NA"));
+     //   classdrop.Items.Insert(0, new ListItem("Select", "NA"));
 
 
     }
@@ -171,13 +171,13 @@ public partial class student : System.Web.UI.Page
         SqlDataAdapter da = new SqlDataAdapter(com);
         DataSet ds = new DataSet();
         da.Fill(ds);  // fill dataset
-        subjectdrop.DataTextField = ds.Tables[0].Columns["Subject"].ToString(); // text field name of table dispalyed in dropdown
+      //  subjectdrop.DataTextField = ds.Tables[0].Columns["Subject"].ToString(); // text field name of table dispalyed in dropdown
                                                                                 //subjectdrop.DataTextField = ds.Tables[0].Columns["Subject"].ToString();             // to retrive specific  textfield name 
-        subjectdrop.DataSource = ds.Tables[0];      //assigning datasource to the dropdownlist
-        subjectdrop.DataBind();  //binding dropdownlist
+       // subjectdrop.DataSource = ds.Tables[0];      //assigning datasource to the dropdownlist
+      //  subjectdrop.DataBind();  //binding dropdownlist
 
         con.Close();
-        subjectdrop.Items.Insert(0, new ListItem("Select", "NA"));
+       // subjectdrop.Items.Insert(0, new ListItem("Select", "NA"));
 
 
     }
@@ -191,34 +191,34 @@ public partial class student : System.Web.UI.Page
 
     protected void Btnserachfilter_Click(object sender, EventArgs e)
     {
-        if (classdrop.SelectedItem.Text == "Select" || subjectdrop.SelectedItem.Text == "Select")
-        {
-            error.Text = "Error:Please check search terms";
-        }
-        else
-        {
-            error.Visible = false;
-            using (SqlConnection con = new SqlConnection(strConnString))
-            {
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.CommandText = "SELECT VIDEO_ID, VIDE0_TITLE,VIDEO_FOR_CLASS,VIDEO_SUBJECT FROM TBL_VIDEO_UPLOAD WHERE VIDEO_UPLOAD_TYPE ='TEACHER' and VIDEO_FOR_CLASS=@class and VIDEO_SUBJECT=@subject ";
-                    // double I = Convert.ToDouble(userkey);
-                    // cmd.Parameters.AddWithValue("@Id", I);
-                    cmd.Parameters.AddWithValue("@class", classdrop.Text);
-                    cmd.Parameters.AddWithValue("@subject", subjectdrop.Text);
-                    cmd.Connection = con;
-                    con.Open();
-                    DataList1.DataSource = cmd.ExecuteReader();
-                    DataList1.DataBind();
-                    con.Close();
-                    DateTime time = DateTime.Now;
+     //   if (classdrop.SelectedItem.Text == "Select" || subjectdrop.SelectedItem.Text == "Select")
+      //{
+      //      error.Text = "Error:Please check search terms";
+      //  }
+      //  else
+      //  {
+      //      error.Visible = false;
+      //      using (SqlConnection con = new SqlConnection(strConnString))
+      //      {
+      //          using (SqlCommand cmd = new SqlCommand())
+      //          {
+      //              cmd.CommandText = "SELECT VIDEO_ID, VIDE0_TITLE,VIDEO_FOR_CLASS,VIDEO_SUBJECT FROM TBL_VIDEO_UPLOAD WHERE VIDEO_UPLOAD_TYPE ='TEACHER' and VIDEO_FOR_CLASS=@class and VIDEO_SUBJECT=@subject ";
+      //              // double I = Convert.ToDouble(userkey);
+      //              // cmd.Parameters.AddWithValue("@Id", I);
+      //              cmd.Parameters.AddWithValue("@class", classdrop.Text);
+      //              cmd.Parameters.AddWithValue("@subject", subjectdrop.Text);
+      //              cmd.Connection = con;
+      //              con.Open();
+      //              DataList1.DataSource = cmd.ExecuteReader();
+      //              DataList1.DataBind();
+      //              con.Close();
+      //              DateTime time = DateTime.Now;
 
-                    StudentTrack studentTrack = new StudentTrack();
-                      studentTrack.StudentTracker(userkey,subjectdrop.Text,classdrop.Text, time);
-                }
-            }
-        }
+      //              StudentTrack studentTrack = new StudentTrack();
+      //                studentTrack.StudentTracker(userkey,subjectdrop.Text,classdrop.Text, time);
+      //          }
+      //      }
+        
     }
 
 
@@ -253,22 +253,14 @@ public partial class student : System.Web.UI.Page
     //    sqlConnection.Open();
     //    string query = "insert into StudentActTrack (Std_Id,Std_visited_class,Std_visited_subject,Date_time)values(@stdid,@visitedclass,@visitedsubject,@datetime)";
     //    SqlCommand sqlCommand = new SqlCommand(query,sqlConnection);
-
+       
     //  //  sqlCommand.Parameters.AddWithValue("@stdusername", stdusername);
     //    sqlCommand.Parameters.AddWithValue("@stdid", stdid);
     //    sqlCommand.Parameters.AddWithValue("@visitedsubject", visitedsubject);
     //    sqlCommand.Parameters.AddWithValue("@visitedclass", cls);
     //    sqlCommand.Parameters.AddWithValue("@datetime", datetime);
     //    sqlCommand.ExecuteNonQuery();
-
+      
     //    sqlConnection.Close();
     //}
-
-    
-
-    protected void Groupchat_Click(object sender, EventArgs e)
-    {
-        Session["userkey"] = userkey;
-        Response.Redirect("StudentGroupChat.aspx?student=" + userkey);
-    }
 }

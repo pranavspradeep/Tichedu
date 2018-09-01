@@ -167,6 +167,7 @@
 													<p class="buttons content-justify">
                                         <a href="login-student.aspx" class="theme_button color1 inverse">Student</a>
                                         <a href="login-teacher.aspx" class="theme_button color1">Teacher</a>
+                                        <a href="login-parents.aspx" class="theme_button color1">Parent</a>
                                     </p>
 												</div>
 											</div>
@@ -183,6 +184,7 @@
 													<p class="buttons content-justify">
                                         <a href="register-student.aspx" class="theme_button color1 inverse">Student</a>
                                         <a href="register-teacher.aspx" class="theme_button color1">Teacher</a>
+                                                        <a href="register-parents.aspx" class="theme_button color1">Parent</a>
                                     </p>
 												</div>
 											</div>

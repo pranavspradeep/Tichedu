@@ -129,7 +129,7 @@ public partial class teacher : System.Web.UI.Page
         id_label.Text = userinfo.id;
         /// lblgender.Text = userinfo.gender;
         // lbllocale.Text = userinfo.locale;
-         lblName.Text = userinfo.name;
+        lblName.Text = userinfo.name;
         Session["username"]= userinfo.name;
         Session["userid"] = userinfo.id;
         // hylprofile.NavigateUrl = userinfo.link;
@@ -207,5 +207,11 @@ public partial class teacher : System.Web.UI.Page
     {   
             Response.Redirect("Youtubevideosupload-listing.aspx/?teacher=" + userkey);
         
+    }
+
+    protected void Groupchat_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Teachergroupchat.aspx/?teacher=" + userkey);
+
     }
 }

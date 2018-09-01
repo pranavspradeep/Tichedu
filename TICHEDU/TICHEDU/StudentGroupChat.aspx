@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="student.aspx.cs" Inherits="student" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="StudentGroupChat.aspx.cs" Inherits="Studentgroupchat" %>
 
 
 <!DOCTYPE html>
@@ -159,9 +159,6 @@
 									<li>
 										 <asp:LinkButton ID="Youtubelive"  OnClick="Youtubelive_Click" runat="server">YouTube Tichedu Live</asp:LinkButton>
 									</li>
-                                    <li>
-										 <asp:LinkButton ID="Groupchat"  OnClick="Groupchat_Click" runat="server">Group chat</asp:LinkButton>
-									</li>
 									
 									<!-- eof pages -->
 								</ul>
@@ -296,37 +293,13 @@
 
 			<section class="ls page_portfolio section_padding_top_10 section_padding_bottom_75">
                 <div class="container">
-                    <h2>VIDEOS</h2>
-                <div class="row">
-                    <div class="col-sm-4"> <p class="text-danger">CLASS</p>   <asp:DropDownList ID="classdrop" CssClass="form-control" runat="server"></asp:DropDownList></div>
-                  <div class="col-sm-4">   <p class="text-danger">SUBJECT</p><asp:DropDownList ID="subjectdrop" runat="server" CssClass="form-control"></asp:DropDownList></div><div class="col-sm-4"><asp:Button ID="Btnserachfilter" runat="server" Text="Submit"  OnClick="Btnserachfilter_Click"/></div></div>
-                    <asp:Label ID="error" runat="server" Font-Italic="true" Font-Size="Large" ForeColor="Red" Text=""></asp:Label>   </div>
-				 <asp:DataList ID="DataList1" runat="server" cssClass="row" RepeatLayout="Flow" RepeatDirection="Horizontal">
-                          <ItemTemplate>
-                          <div class="col-sm-3 col-md-3 col-lg-3"><div class="embed-responsive  embed-responsive-4by3" ><video  id="VideoPlayer" controls="controls"  class="embed-responsive-item" >
-			                    	<source src='<%# Eval("VIDEO_ID", "FileCS.ashx?Id={0}") %>' type="video/mp4">
-
-				
-					</video></div><div class="p-3 mb-2 bg-danger text-white" >TITLE:<%# Eval("VIDE0_TITLE") %></div>
-
-                                 <div class="p-3 mb-2 bg-danger text-white ">VIDEO FRO CLASS:<%# Eval("VIDEO_FOR_CLASS") %></div>    
-                                <div class="p-3 mb-2 bg-danger text-white ">SUBJECT:<%# Eval("VIDEO_SUBJECT") %></div>
-
-
-                          </div>
+                    <h2>Group Chat</h2>
+              <div style="height: 500px;"><div id="rt-a5aff82bd16ae2fcb9cc8e3ac3f30066"></div><script src="https://www.rumbletalk.com/client/?6PPdPGxQ"></script></div>
          
-            
-        </ItemTemplate>
-
-                      <FooterTemplate>
-    <asp:Label ForeColor="Red" Font-Italic="true" Font-Size="Large" Visible='<%#bool.Parse((DataList1.Items.Count==0).ToString())%>' 
-               runat="server" ID="lblNoRecord" Text="No Record Found!"></asp:Label>
-</FooterTemplate> 
-    </asp:DataList>
-
-			</section>
-
-            </form>
+            </div>
+                </section>
+       </div>
+        </form>
 
 			<section class="cs page_copyright section_padding_15 with_top_border_container">
 				<div class="container">
