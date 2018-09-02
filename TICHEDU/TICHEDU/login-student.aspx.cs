@@ -62,4 +62,23 @@ public partial class login_student : System.Web.UI.Page
         string url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + "";
         Response.Redirect(url);
     }
+
+    protected void lostpasslink_Click(object sender, EventArgs e)
+    {
+        if (Request.Form["login_email"] == "")
+        {
+            Error_label.Visible = true;
+            Error_label.Text = "Email field empty";
+        }
+        else
+        {
+            ForgotPassword forgotPassword = new ForgotPassword();
+            string sucess = forgotPassword.Getuserpass(Request.Form["login_email"], "select STUDENT_PASSWORD from TBL_STUDENT_REGISTRATION where STUDENT_EMAIL=@email", "STUDENT_PASSWORD");
+            if (sucess == "ok")
+            {
+                Error_label.Visible = true;
+                Error_label.Text = "Userid and password send to your email";
+            }
+        }
+    }
 }

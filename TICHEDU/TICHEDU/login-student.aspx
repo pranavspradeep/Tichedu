@@ -131,7 +131,8 @@
 															</label>
 														</div>
 
-														<a href="#" aria-expanded="false">Lost password?</a>
+														
+                                                        <asp:LinkButton ID="lostpasslink" OnClick="lostpasslink_Click" runat="server">Lost password?</asp:LinkButton>
 													</div>
                                                     <asp:Button ID="Submit_btn" runat="server" Text="Log In" OnClick="Submit_btn_Click" class="theme_button block_button color1" />
                                                     <asp:Label ID="Error_label" runat="server" ForeColor="Red" Text="Invalid Login Check Email and Password"></asp:Label>

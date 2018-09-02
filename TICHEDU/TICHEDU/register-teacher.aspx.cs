@@ -6,11 +6,11 @@ using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
 using System.Web;
+using System.Web.Mail;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
-    public partial class register_teacher : System.Web.UI.Page
+public partial class register_teacher : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -61,12 +61,13 @@ using System.Web.UI.WebControls;
         try
         {
             con.Open();
-         int i=   cmd.ExecuteNonQuery();
-        if(i!=0)
+            int i = cmd.ExecuteNonQuery();
+            if (i != 0)
             {
-               
+
                 sucess.Visible = true;
-                
+                Registration registration = new Registration();
+                registration.regmail(Request.Form["Firstname_txtbox"], Request.Form["Email_txtbox"]);
                 clear();
 
             }
@@ -78,14 +79,14 @@ using System.Web.UI.WebControls;
             }
             con.Close();
         }
-      catch(Exception an)
+        catch (Exception an)
         {
             throw an;
         }
-
-        
-   
     }
+       
+   
+    
 
     public void clear()
     {

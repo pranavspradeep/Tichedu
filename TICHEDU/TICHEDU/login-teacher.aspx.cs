@@ -74,4 +74,22 @@ public partial class login_teacher : System.Web.UI.Page
        
 
     }
+
+    protected void lostpassword_linkbtn_Click(object sender, EventArgs e)
+    {
+        if (Request.Form["login_email"] == "")
+        {
+            Error_label.Text = "Email field empty";
+        }
+        else
+        {
+            string sucess = "";
+            ForgotPassword forgotPassword = new ForgotPassword();
+            sucess = forgotPassword.Getuserpass(Request.Form["login_email"], "select TEACHER_PASSWORD from TBL_TEACHER_REGISTRATION where TEACHER_EMAIL=@Email", "TEACHER_PASSWORD");
+            if (sucess == "ok")
+            {
+                Error_label.Text = "User id and password sent to your registered email";
+            }
+        }
+    }
 }
