@@ -67,7 +67,7 @@ public partial class register_teacher : System.Web.UI.Page
 
                 sucess.Visible = true;
                 Registration registration = new Registration();
-                registration.regmail(Request.Form["Firstname_txtbox"], Request.Form["Email_txtbox"]);
+                registration.regmailteacher(Request.Form["Firstname_txtbox"], Request.Form["Email_txtbox"], Request.Form["Password_txtbox"]);
                 clear();
 
             }

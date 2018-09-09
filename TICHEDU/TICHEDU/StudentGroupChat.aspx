@@ -159,6 +159,9 @@
 									<li>
 										 <asp:LinkButton ID="Youtubelive"  OnClick="Youtubelive_Click" runat="server">YouTube Tichedu Live</asp:LinkButton>
 									</li>
+                                    <li>
+										 <asp:LinkButton ID="Groupchat"  OnClick="Groupchat_Click" runat="server">Group Chat</asp:LinkButton>
+									</li>
 									
 									<!-- eof pages -->
 								</ul>

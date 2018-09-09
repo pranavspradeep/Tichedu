@@ -230,4 +230,14 @@ public partial class student : System.Web.UI.Page
     {
         Response.Redirect("YoutubeViewStudent.aspx?student=" + userkey);
     }
+
+    protected void Youtubelive_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("YoutubeLiveStudent.aspx?student=" + userkey);
+    }
+
+    protected void Groupchat_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("StudentGroupChat.aspx?student=" + userkey);
+    }
 }

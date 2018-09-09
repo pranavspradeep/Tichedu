@@ -96,7 +96,7 @@ using System.Web.UI.WebControls;
 
                             sucess.Visible = true;
                             Registration registration = new Registration();
-                            registration.regmail(Request.Form["Firstname_txtbox"], Request.Form["Email_txtbox"]);
+                            registration.regmailparents(Request.Form["Firstname_txtbox"], Request.Form["Email_txtbox"], Request.Form["Password_txtbox"]);
                            // sentmail(Request.Form["Firstname_txtbox"],Request.Form["Username_txtbox"]);
                             clear();
 

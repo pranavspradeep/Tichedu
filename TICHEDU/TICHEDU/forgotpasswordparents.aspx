@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="YoutubeViewStudent.aspx.cs" Inherits="YoutubeViewStudent" %>
+﻿
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="forgotpasswordparents.aspx.cs" Inherits="forgotpassparents"%>
 
 
 <!DOCTYPE html>
@@ -48,7 +49,7 @@
 </head>
 
 <body>
-    <form id="frm1" runat="server">
+	
 	<!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
 	<![endif]-->
@@ -69,7 +70,7 @@
 					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
 				</div>
 				<button type="submit" class="theme_button">Search</button>
-			
+			</form>
 		</div>
 	</div>
 
@@ -97,32 +98,44 @@
 				<div class="container">
 					<div class="row">
 					<div class="col-sm-6 "  style="float:right;">									
-						<div class="form-group">
+					<!--	<div class="form-group">
 							<label for="mailchimp" class="sr-only">Search here</label>
 							<i class="flaticon-envelope icon2-"></i>
-							<!--<input name="" type="search" id="mailchimp" class="mailchimp_email form-control" placeholder="Search">
-							<button type="submit" class="theme_button color1"><i class="fa fa-search"></i></button>-->
-						</div>
+							<input name="" type="search" id="mailchimp" class="mailchimp_email form-control" placeholder="Search">
+							<button type="submit" class="theme_button color1"><i class="fa fa-search"></i></button>
+						</div>--->
 					 </div>
-					  
-						<div class="col-sm-6 text-center text-sm-right">
+					  <div class="col-sm-6 text-center text-sm-right">
 							<ul class="inline-list menu darklinks">
-								
+                                <h2>TichEdu Parent Password Recovery</h2>
+                              
+							<!--	<li>
+									<a href="#"><i class="fa fa-file"></i> My Content</a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-file"></i> My Classes</a>
+								</li>
+								<li>
+								  
+							
+										</li>
 								
 								<li>
-                                    
-								<asp:LinkButton ID="Profile_link_button" class="fa fa-upload" OnClick="Profile_link_button_Click" runat="server">PROFILE</asp:LinkButton>
-								</li>
-                                
-								
-										<a href="login-student.aspx" class="small-text medium"><i class="fa fa-sign-out"></i>Sign out</a>
-									</li>
-                                        </form>
-								</li>
+									
+								   
+										
+								</li>--->
+								<li><table>
+				<tr>
+				   <td>
+						
+					</td><td> <asp:Label ID="lblName" runat="server" Text=""></asp:Label></td>
+				</tr></table></li>
 							</ul>
 						</div>
 					</div>
 				</div>
+						
 			</section>
 
 
@@ -139,25 +152,25 @@
 								<img src="images/logo.png" alt="">
 							</a>	
 								<ul class="nav menu-click">
-									<li >
-										
-                                            <asp:LinkButton ID="PdfNotes" OnClick="PdfNotes_Click" runat="server">Pdf Notes</asp:LinkButton>
-									</li>
-									
-										<li>
-                                            <asp:LinkButton ID="Videoslink" OnClick="Videoslink_Click"  runat="server">Videos</asp:LinkButton>
+                                    <li>    
+                                        
+                                    </li>
+										<!--<li class="active">
+								   
+								
+										</li>
+
+									<li>
+                                    
 									</li>
 									<li>
 										<a href="#">Exams</a>
 									</li>
 									<li>
-                                            <asp:LinkButton ID="Youtubevideos" OnClick="Youtubevideos_Click"  runat="server">YouTube Videos</asp:LinkButton>
+										<a href="#">Task</a>
 									</li>
-                                    <li>
-										 <asp:LinkButton ID="Youtubelive"  OnClick="Youtubelive_Click" runat="server">YouTube Tichedu Live</asp:LinkButton>
-									</li>
-                                    <li>
-										 <asp:LinkButton ID="Groupchat"  OnClick="Groupchat_Click" runat="server">Group Chat</asp:LinkButton>
+									<li>
+										<a href="#">View Class Room</a>
 									</li>
 									<!-- eof pages -->
 								</ul>
@@ -166,19 +179,19 @@
 							
 <!--<div class="container text-center">
 	<div class="row">
-        <div class="round hollow text-center">
-        <a href="#" id="addClass"><span class="glyphicon glyphicon-comment"></span> Open in chat </a>
-        </div>       
+		<div class="round hollow text-center">
+		<a href="#" id="addClass"><span class="glyphicon glyphicon-comment"></span> Open in chat </a>
+		</div>       
 	</div>
-</div>--->
+</div>-->
 
 
 <div class="popup-box chat-popup" id="qnimate">
-    		  <div class="popup-head">
+			  <div class="popup-head">
 				<div class="popup-head-left pull-left"><img src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" > Gurdeep Osahan</div>
 					  <div class="popup-head-right pull-right">
 						<div class="btn-group">
-    								  <button class="chat-header-button" data-toggle="dropdown" type="button" aria-expanded="false">
+									  <button class="chat-header-button" data-toggle="dropdown" type="button" aria-expanded="false">
 									   <i class="glyphicon glyphicon-cog"></i> </button>
 									  <ul role="menu" class="dropdown-menu pull-right">
 										<li><a href="#">Media</a></li>
@@ -189,15 +202,15 @@
 						</div>
 						
 						<button data-widget="remove" id="removeClass" class="chat-header-button pull-right" type="button"><i class="glyphicon glyphicon-off"></i></button>
-                      </div>
+					  </div>
 			  </div>
 			<div class="popup-messages">
-    		
+			
 			
 			
 			
 			<div class="direct-chat-messages">
-                    
+					
 					
 					<div class="chat-box-single-line">
 								<abbr class="timestamp">October 8th, 2015</abbr>
@@ -205,27 +218,27 @@
 					
 					
 					<!-- Message. Default to the left -->
-                    <div class="direct-chat-msg doted-border">
-                      <div class="direct-chat-info clearfix">
-                        <span class="direct-chat-name pull-left">Osahan</span>
-                      </div>
-                      <!-- /.direct-chat-info -->
-                      <img alt="message user image" src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img"><!-- /.direct-chat-img -->
-                      <div class="direct-chat-text">
-                        Hey bro, how’s everything going ?
-                      </div>
+					<div class="direct-chat-msg doted-border">
 					  <div class="direct-chat-info clearfix">
-                        <span class="direct-chat-timestamp pull-right">3.36 PM</span>
-                      </div>
+						<span class="direct-chat-name pull-left">Osahan</span>
+					  </div>
+					  <!-- /.direct-chat-info -->
+					  <img alt="message user image" src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img"><!-- /.direct-chat-img -->
+					  <div class="direct-chat-text">
+						Hey bro, how’s everything going ?
+					  </div>
+					  <div class="direct-chat-info clearfix">
+						<span class="direct-chat-timestamp pull-right">3.36 PM</span>
+					  </div>
 						<div class="direct-chat-info clearfix">
 						<span class="direct-chat-img-reply-small pull-left">
 							
 						</span>
 						<span class="direct-chat-reply-name">Singh</span>
 						</div>
-                      <!-- /.direct-chat-text -->
-                    </div>
-                    <!-- /.direct-chat-msg -->
+					  <!-- /.direct-chat-text -->
+					</div>
+					<!-- /.direct-chat-msg -->
 					
 					
 					<div class="chat-box-single-line">
@@ -235,32 +248,32 @@
 					
 					
 					<!-- Message. Default to the left -->
-                    <div class="direct-chat-msg doted-border">
-                      <div class="direct-chat-info clearfix">
-                        <span class="direct-chat-name pull-left">Osahan</span>
-                      </div>
-                      <!-- /.direct-chat-info -->
-                      <img  src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img"><!-- /.direct-chat-img -->
-                      <div class="direct-chat-text">
-                        Hey bro, how’s everything going ?
-                      </div>
+					<div class="direct-chat-msg doted-border">
 					  <div class="direct-chat-info clearfix">
-                        <span class="direct-chat-timestamp pull-right">3.36 PM</span>
-                      </div>
+						<span class="direct-chat-name pull-left">Osahan</span>
+					  </div>
+					  <!-- /.direct-chat-info -->
+					  <img  src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img"><!-- /.direct-chat-img -->
+					  <div class="direct-chat-text">
+						Hey bro, how’s everything going ?
+					  </div>
+					  <div class="direct-chat-info clearfix">
+						<span class="direct-chat-timestamp pull-right">3.36 PM</span>
+					  </div>
 						<div class="direct-chat-info clearfix">
 						  <img  src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img big-round">
 						<span class="direct-chat-reply-name">Singh</span>
 						</div>
-                      <!-- /.direct-chat-text -->
-                    </div>
-                    <!-- /.direct-chat-msg -->
+					  <!-- /.direct-chat-text -->
+					</div>
+					<!-- /.direct-chat-msg -->
 					
 					
-                    
+					
 
-                    
+					
 
-                  </div>
+				  </div>
 			
 			
 			
@@ -276,7 +289,7 @@
 			<div class="btn-footer">
 			<button class="bg_none"><i class="glyphicon glyphicon-film"></i> </button>
 			<button class="bg_none"><i class="glyphicon glyphicon-camera"></i> </button>
-            <button class="bg_none"><i class="glyphicon glyphicon-paperclip"></i> </button>
+			<button class="bg_none"><i class="glyphicon glyphicon-paperclip"></i> </button>
 			<button class="bg_none pull-right"><i class="glyphicon glyphicon-thumbs-up"></i> </button>
 			</div>
 			</div>
@@ -286,86 +299,15 @@
 				</div>
 			</header>
 
+        <form runat="server">
+                <div class=" container">
+                    <h2>Enter registered email</h2>
+                    <asp:TextBox ID="email_txtbox" placeholder="Enter email here" CssClass="form-control" runat="server"></asp:TextBox><div style="margin-top:10px"><asp:Button CssClass="form-control" ID="Requestpassword_btn" runat="server" OnClick="Requestpassword_btn_Click1" Text="Request Password" /></div>
+                    <asp:Label ID="Error_label" runat="server" Text=""></asp:Label>
+                </div>
+          </form>  
 
-
-
-			<section class="ls page_portfolio section_padding_top_10 section_padding_bottom_75">
-			
-                
-
-
-
-
-                    
-              
-                
-                <div class="container">
-                    <h2>YOUTUBE VIDEOS</h2>
-       <div class="form-inline" >           
-  <div class="form-group">
-    <p class="text-danger">CLASS</p>
-  </div>
-
-                 <div class="form-group">
-   <asp:DropDownList ID="classdrop" CssClass="form-control" runat="server"></asp:DropDownList>
-  </div>
-
-
-  <div class="form-group">
-    <p class="text-danger">SUBJECT</p>
-  </div>
-
-<div class="form-group"><asp:DropDownList ID="subjdrop" CssClass="form-control" runat="server"></asp:DropDownList>  </div>
-
-
-   <asp:Button ID="search_btn" CssClass="btn-default" OnClick="search_btn_Click" runat="server" Text="Search" />
-                 <asp:Label  ID="errorlabel" Font-Italic="true" ForeColor="red" Font-Size="Large"  runat="server" Text=""></asp:Label>
-
-           </div>
-					<div class="row">
-						<div class="col-sm-12 col-md-12">
-                            <div class="container">
-  <div class="row">
-                            <asp:DataList ID="YoutubeDataList" Visible="true" runat="server"  AutoGenerateColumns="false"
-         CellSpacing="5">
-        <ItemTemplate>
-        <div class="col-sm-3 col-md-3 col-lg-3"><div class="embed-responsive  embed-responsive-4by3" ><iframe  id="VideoPlayer"  src="https://www.youtube.com/embed/<%# Eval("YOUTUBE_LINK") %>?start=<%# Eval("YSTART") %> &end=<%# Eval("YEND") %>" class="embed-responsive-item" allowfullscreen ></iframe>
-                              </div>     
-            
-    <div class="col-sm " style="background-color:antiquewhite">
-     
-  <p>VIDEO TITLE: <%# Eval("YOUTUBE_TITLE") %></p>
- <p> FOR CLASS <%# Eval("YOUTUBE_CLASS") %></p>
-         <p>SUBJECT <%# Eval("YOUTUBE_SUBJECT") %></p>
-      
-               
-    </div>
-            
-                     
-            
-    
-
-            
-
-
-
-            
-
-                
-                    </ItemTemplate>
-            <FooterTemplate>
-    <asp:Label Font-Italic="true" Font-Size="Large" ForeColor="Red" Visible='<%#bool.Parse((YoutubeDataList.Items.Count==0).ToString())%>' 
-               runat="server" ID="lblNoRecord" Text="No Record Found!"></asp:Label>
-</FooterTemplate>                     
-                               
-    </asp:DataList>
-					</div>
-                                </div>
-                               </div>
-                        </div>
-                    </div>
-                
-			</section>
+       
 
 
 
@@ -387,6 +329,6 @@
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/custom.js"></script>
-</form>
+    
 </body>
 </html>
