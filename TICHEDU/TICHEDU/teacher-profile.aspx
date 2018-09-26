@@ -191,8 +191,8 @@
 					<div class="row">
 						<div class="col-sm-12 text-center">
 							<h2 class="highlight2">
-                                <asp:Label ID="Teacher_name_firstname" runat="server" Text="Label"></asp:Label>&nbsp;<asp:Label ID="Teacher_name_lastname" runat="server" Text="Label"></asp:Label></h2>
-							<h4 class="breadcrumb darklinks"> <asp:Label ID="Teacher_Subject" runat="server" Text="Label"></asp:Label></h4>
+                                <asp:Label ID="Teacher_name_firstname" runat="server" Text=""></asp:Label>&nbsp;<asp:Label ID="Teacher_name_lastname" runat="server" Text=""></asp:Label></h2>
+							<h4 class="breadcrumb darklinks"> <asp:Label ID="Teacher_Subject" runat="server" Text=""></asp:Label></h4>
 							</ol>
 						</div>
 					</div>
@@ -239,24 +239,24 @@
 												<header class="entry-header">
 													<h4 class="entry-title ">
 														<a href="#" rel="bookmark">
-                                                            <asp:Label ID="Name_2" runat="server" Text="Label"></asp:Label>&nbsp; <asp:Label ID="last_name2" runat="server" Text="Label"></asp:Label></a>
+                                                            <asp:Label ID="Name_2" runat="server" Text="Label"></asp:Label>&nbsp; <asp:Label ID="last_name2" runat="server" Text=""></asp:Label></a>
 													</h4>
 													<div class="entry-meta small-text medium content-justify">
 														<span class="highlight2links">
-															<a href="#">Subject:<asp:Label ID="subjects_label" CssClass="form-control" runat="server" Text="Label"></asp:Label></a>
+															<a href="#">Subject:<asp:Label ID="subjects_label" CssClass="form-control" runat="server" Text=""></asp:Label></a>
 														</span>
 														<span class="greylinks">
-															<a href="#">D.O.B:<asp:Label ID="Dateofbirth_label" CssClass="form-control" runat="server" Text="Label"></asp:Label></a>
+															<a href="#">D.O.B:<asp:Label ID="Dateofbirth_label" CssClass="form-control" runat="server" Text=""></asp:Label></a>
 														</span>
 													</div>
 												</header>
 
 												<div class="entry-content">
-                                                 Address:<asp:Label ID="Address" runat="server" CssClass="form-control" Text="Label"></asp:Label><br />
-                                                 Country:<asp:Label ID="Country" runat="server" CssClass="form-control" Text="Label"></asp:Label><br />
-                                                    City:<asp:Label ID="City" runat="server" CssClass="form-control" Text="Label"></asp:Label><br />
-                                                    Street:<asp:Label ID="Street" runat="server" CssClass="form-control" Text="Label"></asp:Label><br />
-                                                    Zip:<asp:Label ID="Zip" runat="server" CssClass="form-control" Text="Label"></asp:Label>
+                                                 Address:<asp:Label ID="Address" runat="server" CssClass="form-control" Text=""></asp:Label><br />
+                                                 Country:<asp:Label ID="Country" runat="server" CssClass="form-control" Text=""></asp:Label><br />
+                                                    City:<asp:Label ID="City" runat="server" CssClass="form-control" Text=""></asp:Label><br />
+                                                    Street:<asp:Label ID="Street" runat="server" CssClass="form-control" Text=""></asp:Label><br />
+                                                    Zip:<asp:Label ID="Zip" runat="server" CssClass="form-control" Text=""></asp:Label>
 
 												</div>
 

@@ -309,7 +309,7 @@
 				
 					</video></div><div class="p-3 mb-2 bg-danger text-white" >TITLE:<%# Eval("VIDE0_TITLE") %></div>
 
-                                 <div class="p-3 mb-2 bg-danger text-white ">VIDEO FRO CLASS:<%# Eval("VIDEO_FOR_CLASS") %></div>    
+                                 <div class="p-3 mb-2 bg-danger text-white ">VIDEO FOR CLASS:<%# Eval("VIDEO_FOR_CLASS") %></div>    
                                 <div class="p-3 mb-2 bg-danger text-white ">SUBJECT:<%# Eval("VIDEO_SUBJECT") %></div>
 
 

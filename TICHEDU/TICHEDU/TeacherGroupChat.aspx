@@ -48,6 +48,7 @@
 </head>
 
 <body>
+    	  <form runat="server"> 
 	<!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
 	<![endif]-->
@@ -103,17 +104,28 @@
 							<button type="submit" class="theme_button color1"><i class="fa fa-search"></i></button>-->
 						</div>
 					 </div>
-					  
+				
 						<div class="col-sm-6 text-center text-sm-right">
-							<ul class="inline-list menu darklinks">
+							<ul class="inline-list menu darklinks" >
 								<li>
-									<form runat="server"><asp:LinkButton ID="Profile_link_btn" class="fa fa-user" OnClick="Profile_link_btn_Click" runat="server">Profile</asp:LinkButton>
-                                    
+										<asp:LinkButton ID="mycontent" class="fa fa-upload" OnClick="mycontent_Click" runat="server" >MY CONTENT</asp:LinkButton>
 								</li>
-                                <li><a href="login-student.aspx" class="small-text medium"><i class="fa fa-sign-out"></i>Sign out</a></li>
-                                <li>
-                                    <asp:Image ID="profilepic" Height="40" Width="40" runat="server" />
-                                    <asp:Label ID="username" runat="server" Text=""></asp:Label></li>
+								
+								<li>
+								  
+								<asp:LinkButton ID="Profile_link_button" class="fa fa-upload" OnClick="Profile_link_button_Click" runat="server" >PROFILE</asp:LinkButton>
+							
+										</li>
+								
+								<li>
+									
+								   
+										<asp:LinkButton ID="Upload_link_button" class="fa fa-upload" OnClick="Upload_link_button_Click" runat="server">UPLOAD</asp:LinkButton>
+									   
+								</li>
+								<li><a href="login-teacher.aspx" class="small-text medium"><i class="fa fa-sign-out"></i>Sign out</a></li>
+                              <!-- <li><asp:Image ID="GoogleProfileimage" runat="server" Width="50" Height="50" /><asp:Label ID="lblName" runat="server" Text=""></asp:Label>
+                                    <asp:Label ID="id_label" runat="server" Text=""></asp:Label></li>-->
 							</ul>
 						</div>
 					</div>
@@ -158,6 +170,16 @@
 									</li>
 									<li>
 										 <asp:LinkButton ID="Youtubelive"  OnClick="Youtubelive_Click" runat="server">YouTube Tichedu Live</asp:LinkButton>
+									</li>
+                                    <li>
+										<g:sharetoclassroom url="http://url-to-share" size="32"></g:sharetoclassroom>
+                                        <asp:Label ID="Label1" runat="server" Text="Google Classroom"></asp:Label>
+									</li>
+                                    <li>
+										 <asp:LinkButton ID="Groupchat" OnClick="Groupchat_Click" runat="server">Group Chat</asp:LinkButton>
+									</li>
+                                      <li>
+										 <asp:LinkButton ID="whiteboard" OnClick="whiteboard_Click" runat="server">White Board</asp:LinkButton>
 									</li>
 									
 									<!-- eof pages -->
@@ -299,8 +321,8 @@
             </div>
                 </section>
        </div>
+       
         </form>
-
 			<section class="cs page_copyright section_padding_15 with_top_border_container">
 				<div class="container">
 					<div class="row">
@@ -315,7 +337,7 @@
 		<!-- eof #box_wrapper -->
 	</div>
 	<!-- eof #canvas -->
-
+     <script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/custom.js"></script>

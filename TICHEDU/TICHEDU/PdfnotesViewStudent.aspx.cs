@@ -136,7 +136,7 @@ public partial class PdfnotesViewStudent : System.Web.UI.Page
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.CommandText = "SELECT PDF_ID, PDF_TITLE,PDF_CLASS,PDF_SUBJECT FROM TBL_PDF_UPLOADS WHERE PDF_CLASS=@pdfclass and PDF_SUBJECT=@pdfsubject ";
-                    double I = Convert.ToDouble(userkey);
+                   /// double I = Convert.ToDouble(userkey);
                     // cmd.Parameters.AddWithValue("@Id", I);
                     cmd.Parameters.AddWithValue("@pdfclass", classdrop.SelectedItem.Text);
                     cmd.Parameters.AddWithValue("@pdfsubject", subjdrop.SelectedItem.Text);
@@ -148,7 +148,7 @@ public partial class PdfnotesViewStudent : System.Web.UI.Page
                     DateTime time = DateTime.Now;
 
                     StudentTrack studentTrack = new StudentTrack();
-                    studentTrack.StudentTracker(userkey, subjdrop.Text, classdrop.Text, time);
+                    studentTrack.StudentTracker(userkey, subjdrop.Text, classdrop.Text, time,"Pdf notes viewing","Active");
                 }
             }
         }

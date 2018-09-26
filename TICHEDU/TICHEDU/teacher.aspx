@@ -169,6 +169,9 @@
                                     <li>
 										 <asp:LinkButton ID="Groupchat" OnClick="Groupchat_Click" runat="server">Group Chat</asp:LinkButton>
 									</li>
+                                      <li>
+										 <asp:LinkButton ID="whiteboard" OnClick="whiteboard_Click" runat="server">White Board</asp:LinkButton>
+									</li>
 									<!-- eof pages -->
 								</ul>
 							</nav>

@@ -184,4 +184,15 @@ public partial class Youtubevideosupload : System.Web.UI.Page
 
         
     }
+    protected void Groupchat_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Teachergroupchat.aspx/?teacher=" + userkey);
+
+    }
+
+    protected void whiteboard_Click(object sender, EventArgs e)
+    {
+
+        Response.Redirect("teacher-whiteboard.aspx/?teacher=" + userkey);
+    }
 }

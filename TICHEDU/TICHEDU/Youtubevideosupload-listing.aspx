@@ -162,6 +162,12 @@
 										<g:sharetoclassroom url="http://url-to-share" size="32"></g:sharetoclassroom>
                                         <asp:Label ID="Label1" runat="server" Text="Google Classroom"></asp:Label>
 									</li>
+                                    <li>
+										 <asp:LinkButton ID="Groupchat" OnClick="Groupchat_Click" runat="server">Group Chat</asp:LinkButton>
+									</li>
+                                      <li>
+										 <asp:LinkButton ID="whiteboard" OnClick="whiteboard_Click" runat="server">White Board</asp:LinkButton>
+									</li>
 									<!-- eof pages -->
 								</ul>
 							</nav>

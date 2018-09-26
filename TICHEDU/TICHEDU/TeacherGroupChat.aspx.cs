@@ -37,13 +37,22 @@ public partial class teachergroupchat : System.Web.UI.Page
         public string gender { get; set; }
         public string locale { get; set; }
     }
+    protected void whiteboard_Click(object sender, EventArgs e)
+    {
 
+        Response.Redirect("teacher-whiteboard.aspx/?teacher=" + userkey);
+    }
+    protected void Groupchat_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Teachergroupchat.aspx/?teacher=" + userkey);
+
+    }
 
     string strConnString = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
     protected void Page_Load(object sender, EventArgs e)
     {
         userkey = Request.QueryString["teacher"];
-      //  profilepic.Visible = false;
+     //  profilepic.Visible = false;
        // username.Visible = false;
         if (!Page.IsPostBack)
         {
@@ -186,7 +195,7 @@ public partial class teachergroupchat : System.Web.UI.Page
 
     protected void Profile_link_btn_Click(object sender, EventArgs e)
     {
-        Response.Redirect("student-profile.aspx?student=" + userkey);
+        Response.Redirect("teacher-profile.aspx?teacher=" + userkey);
     }
 
     protected void Btnserachfilter_Click(object sender, EventArgs e)
@@ -227,17 +236,17 @@ public partial class teachergroupchat : System.Web.UI.Page
 
     protected void Pdfnoteslink_btn_Click(object sender, EventArgs e)
     {
-        Response.Redirect("PdfnotesViewStudent.aspx/?student=" + userkey);
+        Response.Redirect("PdfnotesView.aspx/?teacher=" + userkey);
     }
 
     protected void video_link_Click(object sender, EventArgs e)
     {
-        Response.Redirect("student.aspx?student=" + userkey);
+        Response.Redirect("teacher.aspx?teacher=" + userkey);
     }
 
     protected void Youtubevideos_Click(object sender, EventArgs e)
     {
-        Response.Redirect("YoutubeViewStudent.aspx?student=" + userkey);
+        Response.Redirect("Youtubevideosupload-listing.aspx?teacher=" + userkey);
     }
 
     protected void Youtubelive_Click(object sender, EventArgs e)
@@ -253,14 +262,36 @@ public partial class teachergroupchat : System.Web.UI.Page
     //    sqlConnection.Open();
     //    string query = "insert into StudentActTrack (Std_Id,Std_visited_class,Std_visited_subject,Date_time)values(@stdid,@visitedclass,@visitedsubject,@datetime)";
     //    SqlCommand sqlCommand = new SqlCommand(query,sqlConnection);
-       
+
     //  //  sqlCommand.Parameters.AddWithValue("@stdusername", stdusername);
     //    sqlCommand.Parameters.AddWithValue("@stdid", stdid);
     //    sqlCommand.Parameters.AddWithValue("@visitedsubject", visitedsubject);
     //    sqlCommand.Parameters.AddWithValue("@visitedclass", cls);
     //    sqlCommand.Parameters.AddWithValue("@datetime", datetime);
     //    sqlCommand.ExecuteNonQuery();
-      
+
     //    sqlConnection.Close();
     //}
+
+    protected void Profile_link_button_Click(object sender, EventArgs e)
+    {
+
+
+        Response.Redirect("teacher-profile.aspx/?teacher=" + userkey);
+
+
+    }
+    protected void Upload_link_button_Click(object sender, EventArgs e)
+    {
+
+
+        Response.Redirect("teacher_video_upload.aspx/?teacher=" + userkey);
+
+
+    }
+
+    protected void mycontent_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("teacher.aspx/?teacher=" + userkey);
+    }
 }

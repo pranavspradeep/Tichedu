@@ -111,9 +111,9 @@
                                     
 								</li>
                                 <li><a href="login-student.aspx" class="small-text medium"><i class="fa fa-sign-out"></i>Sign out</a></li>
-                                <li>
+                           <!--     <li>
                                     <asp:Image ID="profilepic" Height="40" Width="40" runat="server" />
-                                    <asp:Label ID="username" runat="server" Text=""></asp:Label></li>
+                                    <asp:Label ID="username" runat="server" Text=""></asp:Label></li>-->
 							</ul>
 						</div>
 					</div>

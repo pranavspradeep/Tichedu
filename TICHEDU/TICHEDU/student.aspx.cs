@@ -15,8 +15,8 @@ using System.Web.UI.WebControls;
 public partial class student : System.Web.UI.Page
 {
     public string userkey { set; get; }
-    string clientid = "556887803694-s1iakv1ep16bgvupkp3suh2jc549922j.apps.googleusercontent.com";
-    string clientsecret = "hE1s29hJqp2u-p4yLefbZWHb";
+    string clientid = "122415916779-7bhspojqe33c5t6sjr1m894ju3e3joks.apps.googleusercontent.com";
+    string clientsecret = "a_oOseuX0mNsaye_MLguzjLj";
     string redirection_url = "http://www.tichedu.com/student.aspx";
     string url = "https://accounts.google.com/o/oauth2/token";
     public class Tokenclass
@@ -126,7 +126,7 @@ public partial class student : System.Web.UI.Page
             using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.CommandText = "SELECT VIDEO_ID, VIDE0_TITLE,VIDEO_SUBJECT FROM TBL_VIDEO_UPLOAD WHERE VIDEO_UPLOAD_TYPE ='TEACHER' and VIDEO_FOR_CLASS=@class and VIDEO_SUBJECT=@subject ";
-                double I = Convert.ToDouble(userkey);
+               // double I = Convert.ToDouble(userkey);
                 // cmd.Parameters.AddWithValue("@Id", I);
                 cmd.Parameters.AddWithValue("@class", classdrop.Text);
                 cmd.Parameters.AddWithValue("@subject", subjectdrop.Text);
@@ -215,7 +215,7 @@ public partial class student : System.Web.UI.Page
                     DateTime time = DateTime.Now;
 
                     StudentTrack studentTrack = new StudentTrack();
-                      studentTrack.StudentTracker(userkey,subjectdrop.Text,classdrop.Text, time);
+                      studentTrack.StudentTracker(userkey,subjectdrop.Text,classdrop.Text, time,"Video Watching","Active");
                 }
             }
         }

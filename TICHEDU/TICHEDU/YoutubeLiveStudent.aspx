@@ -296,8 +296,8 @@
 			<section class="ls page_portfolio section_padding_top_10 section_padding_bottom_75">
                 <div class="container">
                     <h2>YOUTUBE LIVE TICHEDU</h2>
-                  <iframe width="560" height="349" src="https://www.youtube.com/embed/live_stream?channel=UCLt-HO6XQEP7gHnapmxPKWQ" frameborder="0" allowfullscreen></iframe>
-            
+                 
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=UCOq1YRCaj8_7g1SrxxjnYVw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
              </div>
 
 			</section>

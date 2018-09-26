@@ -56,8 +56,8 @@ public partial class login_student : System.Web.UI.Page
 
     protected void Googlelogin_Click(object sender, EventArgs e)
     {
-        string clientid = "556887803694-s1iakv1ep16bgvupkp3suh2jc549922j.apps.googleusercontent.com";
-        string clientsecret = "hE1s29hJqp2u-p4yLefbZWHb";
+        string clientid = "122415916779-7bhspojqe33c5t6sjr1m894ju3e3joks.apps.googleusercontent.com";
+        string clientsecret = "a_oOseuX0mNsaye_MLguzjLj";
         string redirection_url = "http://www.tichedu.com/student.aspx";
         string url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + "";
         Response.Redirect(url);

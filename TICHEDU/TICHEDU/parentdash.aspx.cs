@@ -99,7 +99,7 @@ public partial class parentdash : System.Web.UI.Page
             using (SqlCommand cmd = new SqlCommand())
             {
 
-                cmd.CommandText = " select t1.STUDENT_ID,t3.Date_time,t3.Std_visited_class,t3.Std_visited_subject from TBL_STUDENT_REGISTRATION  t1 ,TBL_PARENT_REGISTRATION t2,StudentActTrack t3  where t1.STUDENT_EMAIL= @studentemail and t3.Std_Id=t1.STUDENT_ID ORDER BY Date_time DESC";
+                cmd.CommandText = "select distinct t1.STUDENT_ID,t3.Date_time,t3.Std_visited_class,t3.Std_visited_subject,t3.Activity,t3.status from TBL_STUDENT_REGISTRATION  t1 ,TBL_PARENT_REGISTRATION t2,StudentActTrack t3  where t1.STUDENT_EMAIL=@studentemail  and t3.Std_Id=cast(t1.STUDENT_ID as varchar) ORDER BY Date_time DESC";
 
 
                 cmd.Parameters.AddWithValue("@studentemail", studentemail);

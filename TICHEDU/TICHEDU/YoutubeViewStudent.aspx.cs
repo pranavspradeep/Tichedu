@@ -136,7 +136,7 @@ public partial class YoutubeViewStudent : System.Web.UI.Page
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.CommandText = "SELECT YOU_ID,YOUTUBE_TITLE,YOUTUBE_SUBJECT,YOUTUBE_CLASS,YOUTUBE_TEACHER_ID,YOUTUBE_LINK,YSTART,YEND FROM TBL_YOUTUBE_VIDEOS WHERE YOUTUBE_SUBJECT=@Yousubject and YOUTUBE_CLASS=@Youclass ";
-                    double I = Convert.ToDouble(userkey);
+                    //double I = Convert.ToDouble(userkey);
                     // cmd.Parameters.AddWithValue("@Id", I);
                     cmd.Parameters.AddWithValue("@Youclass", classdrop.SelectedItem.Text);
                     cmd.Parameters.AddWithValue("@Yousubject", subjdrop.SelectedItem.Text);
@@ -148,7 +148,7 @@ public partial class YoutubeViewStudent : System.Web.UI.Page
                     DateTime time = DateTime.Now;
 
                     StudentTrack studentTrack = new StudentTrack();
-                    studentTrack.StudentTracker(userkey, subjdrop.Text, classdrop.Text, time);
+                    studentTrack.StudentTracker(userkey, subjdrop.Text, classdrop.Text, time,"Youtube video watching","Active");
                 }
             }
         }

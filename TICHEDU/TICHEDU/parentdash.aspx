@@ -310,6 +310,8 @@
       <th style="background-color:#ff0000">DATE</th>
       <th  style="background-color:#ff0000">VISITED CLASS</th>
       <th   style="background-color:#ff0000">VISITED SUBJECTS</th>
+        <th   style="background-color:#ff0000">ACTIVITY</th>
+        <th   style="background-color:#ff0000">STATUS</th>
     </tr>
   </thead>
   <tbody>
@@ -319,6 +321,8 @@
       <td style="color:black"><%# Eval("Date_time") %></td>    
       <td style="color:black"><%# Eval("Std_visited_class") %></td>
       <td style="color:black"><%# Eval("Std_visited_subject") %></td>
+             <td style="color:black"><%# Eval("Activity") %></td>
+             <td style="color:black"><%# Eval("status") %></td>
     </tr>
     </ItemTemplate>
     <FooterTemplate>
