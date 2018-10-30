@@ -23,10 +23,10 @@ public class FileCS : IHttpHandler
                 con.Open();
                 using (SqlDataReader sdr = cmd.ExecuteReader())
                 {
-                    sdr.Read();
-                    bytes = (byte[])sdr["VIDEO_FILE"];
+                   sdr.Read();
+                   bytes = (byte[])sdr["VIDEO_FILE"];
                    // contentType = sdr["VIDEO_UPLOAD_TYPE"].ToString();
-                    name = sdr["VIDE0_TITLE"].ToString();
+                   name = sdr["VIDE0_TITLE"].ToString();
                 }
                 con.Close();
             }

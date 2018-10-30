@@ -141,23 +141,23 @@
 								<ul class="nav menu-click">
 									<li >
 										
-                                            <asp:LinkButton ID="PdfNotes" OnClick="PdfNotes_Click" runat="server">Pdf Notes</asp:LinkButton>
+                                            <asp:LinkButton ID="PdfNotes" OnClick="PdfNotes_Click" runat="server">TichEdu Pdf Notes</asp:LinkButton>
 									</li>
 									
 										<li>
-                                            <asp:LinkButton ID="Videoslink" OnClick="Videoslink_Click"  runat="server">Videos</asp:LinkButton>
+                                            <asp:LinkButton ID="Videoslink" OnClick="Videoslink_Click"  runat="server">TichEdu Tutorials</asp:LinkButton>
 									</li>
 									<li>
-										<a href="#">Exams</a>
+										<asp:LinkButton ID="exam" OnClick="exam_Click"  runat="server">TichEdu Exam</asp:LinkButton>
 									</li>
 									<li>
-                                            <asp:LinkButton ID="Youtubevideos" OnClick="Youtubevideos_Click"  runat="server">YouTube Videos</asp:LinkButton>
+                                            <asp:LinkButton ID="Youtubevideos" OnClick="Youtubevideos_Click"  runat="server">TichEdu YouTube Videos</asp:LinkButton>
 									</li>
                                     <li>
-										 <asp:LinkButton ID="Youtubelive"  OnClick="Youtubelive_Click" runat="server">YouTube Tichedu Live</asp:LinkButton>
+										 <asp:LinkButton ID="Youtubelive"  OnClick="Youtubelive_Click" runat="server">TichEdu YouTube Live</asp:LinkButton>
 									</li>
                                     <li>
-										 <asp:LinkButton ID="Groupchat"  OnClick="Groupchat_Click" runat="server">Group Chat</asp:LinkButton>
+										 <asp:LinkButton ID="Groupchat"  OnClick="Groupchat_Click" runat="server">TichEdu Group Chat</asp:LinkButton>
 									</li>
 									<!-- eof pages -->
 								</ul>
@@ -300,7 +300,7 @@
               
                 
                 <div class="container">
-                    <h2>YOUTUBE VIDEOS</h2>
+                    <h2>TichEdu YOUTUBE VIDEOS</h2>
        <div class="form-inline" >           
   <div class="form-group">
     <p class="text-danger">CLASS</p>

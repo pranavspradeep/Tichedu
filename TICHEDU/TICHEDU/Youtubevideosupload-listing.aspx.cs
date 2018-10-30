@@ -40,7 +40,10 @@ public partial class Youtubevideosupload : System.Web.UI.Page
             }
         }
     }
-
+    protected void studentactivity_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("teacher_Result.aspx/?teacher=" + userkey);
+    }
 
 
 
@@ -95,5 +98,26 @@ public partial class Youtubevideosupload : System.Web.UI.Page
     {
 
         Response.Redirect("teacher-whiteboard.aspx/?teacher=" + userkey);
+    }
+
+    
+
+    protected void delete_Click(object sender, EventArgs e)
+    {
+        string strConnString = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
+        int id = 0;
+        LinkButton myButton = sender as LinkButton;
+        if (myButton != null)
+        {
+            id = Convert.ToInt32(myButton.CommandArgument);
+        }
+        SqlConnection connection = new SqlConnection(strConnString);
+        connection.Open();
+        SqlCommand cmd = new SqlCommand("deleteYouVideo", connection);
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@id", id);
+        cmd.ExecuteNonQuery();
+        BindDataList();
+        connection.Close();
     }
 }

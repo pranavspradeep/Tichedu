@@ -107,7 +107,7 @@
 						<div class="col-sm-6 text-center text-sm-right">
 							<ul class="inline-list menu darklinks">
 								<li>
-									<form runat="server"><asp:LinkButton ID="Profile_link_btn" class="fa fa-user" OnClick="Profile_link_btn_Click" runat="server">Profile</asp:LinkButton>
+									<form runat="server"><asp:LinkButton ID="Profile_link_btn" class="fa fa-user" OnClick="Profile_link_btn_Click" runat="server">PROFILE</asp:LinkButton>
                                     
 								</li>
                                 <li><a href="login-student.aspx" class="small-text medium"><i class="fa fa-sign-out"></i>Sign out</a></li>
@@ -136,14 +136,14 @@
 								<ul class="nav menu-click">
 									<li class="active">
 										
-									 <asp:LinkButton ID="Pdfnoteslink_btn"  OnClick="Pdfnoteslink_btn_Click" runat="server">Pdf Notes</asp:LinkButton>
+									 <asp:LinkButton ID="Pdfnoteslink_btn"  OnClick="Pdfnoteslink_btn_Click" runat="server">TichEdu Pdf Notes</asp:LinkButton>
 								
 
 
 									</li>
                                     <li>
 											
-									 <asp:LinkButton ID="video_link"  OnClick="video_link_Click" runat="server">Videos</asp:LinkButton>
+									 <asp:LinkButton ID="video_link"  OnClick="video_link_Click" runat="server">TichEdu Tutorials</asp:LinkButton>
 								
 									</li>
 									<!--<li>
@@ -151,16 +151,16 @@
 									</li>-->
 									
 									<li>
-										<a href="selectexam.aspx">Exam</a>
+										 <asp:LinkButton ID="exam"  OnClick="exam_Click" runat="server">TichEdu Exam</asp:LinkButton>
 									</li>
 									<li>
-										 <asp:LinkButton ID="Youtubevideos"  OnClick="Youtubevideos_Click" runat="server">YouTube Videos</asp:LinkButton>
+										 <asp:LinkButton ID="Youtubevideos"  OnClick="Youtubevideos_Click" runat="server">TichEdu YouTube Videos</asp:LinkButton>
 									</li>
 									<li>
-										 <asp:LinkButton ID="Youtubelive"  OnClick="Youtubelive_Click" runat="server">YouTube Tichedu Live</asp:LinkButton>
+										 <asp:LinkButton ID="Youtubelive"  OnClick="Youtubelive_Click" runat="server">TichEdu YouTube Live</asp:LinkButton>
 									</li>
 									<li>
-										 <asp:LinkButton ID="Groupchat"  OnClick="Groupchat_Click" runat="server">Group chat</asp:LinkButton>
+										 <asp:LinkButton ID="Groupchat"  OnClick="Groupchat_Click" runat="server">TichEdu Group chat</asp:LinkButton>
 									</li>
 									<!-- eof pages -->
 								</ul>
@@ -295,7 +295,7 @@
 
 			<section class="ls page_portfolio section_padding_top_10 section_padding_bottom_75">
                 <div class="container">
-                    <h2>YOUTUBE LIVE TICHEDU</h2>
+                    <h2>TichEdu YOUTUBE LIVE </h2>
                  
            <iframe width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=UCOq1YRCaj8_7g1SrxxjnYVw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
              </div>

@@ -302,6 +302,8 @@
                 <div class="container">
                     <div style="margin-top:10px">
                       <asp:Button ID="ADD_btn" runat="server" Text="Add Subject,Class,Exam name,Subject&Class" OnClick="ADD_btn_Click"/>
+                        <asp:Button ID="ADD_news" runat="server" Text="Add News" OnClick="ADD_news_Click"/>
+                        <asp:Button ID="Add_event" runat="server" Text="Add Event" OnClick="Add_event_Click"/>
                         <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Signout" />
                    
                         </div>

@@ -127,7 +127,7 @@
 													<div class="content-justify divider_20">
 														<div class="checkbox margin_0">
 															<input type="checkbox" id="remember_me_checkbox">
-															<label for="remember_me_checkbox" class="grey">Rememrber Me
+															<label for="remember_me_checkbox" class="grey">Remember Me
 															</label>
 														</div>
 

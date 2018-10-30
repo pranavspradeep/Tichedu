@@ -57,7 +57,10 @@ public partial class Youtubevideosupload : System.Web.UI.Page
             userkey = Session["userid"].ToString();
         }
     }
-
+    protected void studentactivity_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("teacher_Result.aspx/?teacher=" + userkey);
+    }
     protected void Upload(object sender, EventArgs e)
     { if (Video_title.Text == "" || classdrop.SelectedItem.Text == ""||subdrop.Text==""|| YoutubeLink.Text=="")
         { message.Text = "Error:Please recheck all fields before submit "; }

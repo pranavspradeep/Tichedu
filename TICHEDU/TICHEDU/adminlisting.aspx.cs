@@ -398,4 +398,14 @@ public partial class admin_listng : System.Web.UI.Page
     {
         Response.Redirect("login-Admin.aspx");
     }
+
+    protected void ADD_news_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AddNews.aspx");
+    }
+
+    protected void Add_event_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AddEvent.aspx");
+    }
 }

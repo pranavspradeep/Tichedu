@@ -39,7 +39,7 @@ public class ForgotPassword
         }
         if (!string.IsNullOrEmpty(password))
         {
-            MailMessage mm = new MailMessage("info@tichedu.com", email);
+            MailMessage mm = new MailMessage("info@TichEdu.com", email);
             mm.Subject = "Password Recovery";
             mm.Body = string.Format("Hi {0},<br /><br />Your password is {1}.<br /><br />Thank You.",email, password);
             mm.IsBodyHtml = true;
@@ -47,7 +47,7 @@ public class ForgotPassword
             smtp.Host = "localhost";
             smtp.EnableSsl = false;
             NetworkCredential NetworkCred = new NetworkCredential();
-            NetworkCred.UserName = "info@tichedu.com";
+            NetworkCred.UserName = "info@TichEdu.com";
             NetworkCred.Password = "tich@2018";
             smtp.UseDefaultCredentials = true;
             smtp.Credentials = NetworkCred;

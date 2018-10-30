@@ -1,0 +1,22 @@
+
+.slan {
+    position: relative;
+    -webkit-animation-name: ltrs; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: ltrs;
+    animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes ltrs {
+    0%   { left:-900px; top:0px;}
+    25%  { left:0px; top:0px;}
+
+}
+
+/* Standard syntax */
+@keyframes ltrs {
+    0%   { left:-900px; top:0px;}
+    25%  { left:0px; top:0px;}
+
+}

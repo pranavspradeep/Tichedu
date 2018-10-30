@@ -1,357 +1,268 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="Index" %>
-
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+<html lang="en">
 <head>
-	<title>TichEdu</title>
-	<meta charset="utf-8">
-	<!--[if IE]>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<![endif]-->
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="sld/layerslider/css/layerslider.css">
-    <link rel="stylesheet" href="sld/css/owl.carousel.min.css">
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/animations.css">
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
-	<link rel="stylesheet" href="css/shop.css">
-	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-
-	<!--[if lt IE 9]>
-		<script src="js/vendor/html5shiv.min.js"></script>
-		<script src="js/vendor/respond.min.js"></script>
-		<script src="js/vendor/jquery-1.12.4.min.js"></script>
-	<![endif]-->
-
+  <title>TichEdu Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+  <link rel="stylesheet" href="assets/css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/custom.css" type="text/css" />
+  
 </head>
-
 <body>
-	<!--[if lt IE 9]>
-		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
-	<![endif]-->
-
-	<div class="preloader">
-		<div class="preloader_image"></div>
-	</div>
-
-
-	<!-- Unyson messages modal -->
-	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
-		<div class="fw-messages-wrap ls with_padding">
-			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
-			<!--
-		<ul class="list-unstyled">
-			<li>Message To User</li>
-		</ul>
-		-->
-
-		</div>
-	</div>
-	<!-- eof .modal -->
-
-	<!-- wrappers for visual page editor and boxed version of template -->
-	<div id="canvas">
-		<div id="box_wrapper">
-
-			<!-- template sections -->
-
-			<section class="page_topline ls ms table_section visible-xs">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 text-center">
-
-							<ul class="inline-list menu darklinks">
-								<li>
-									<div class="dropdown login-dropdown">
-										<a href="#" id="topline-login" data-target="#" data-toggle="dropdown" class="small-text">Login</a>
-										<div class="dropdown-menu" aria-labelledby="topline-login">
-
-											<form>
-
-												<div class="form-group has-placeholder">
-													<label for="topline-login-email">Email address</label>
-													<input type="email" class="form-control" id="topline-login-email" placeholder="Email Address">
-												</div>
-
-
-												<div class="form-group has-placeholder">
-													<label for="topline-login-password">Password</label>
-													<input type="password" class="form-control" id="topline-login-password" placeholder="Password">
-												</div>
-
-												<div class="content-justify divider_20">
-													<div class="checkbox margin_0">
-														<input type="checkbox" id="topline-remember_me_checkbox">
-														<label for="topline-remember_me_checkbox" class="grey">Rememrber Me
-														</label>
-													</div>
-
-													<a href="#">
-                                            Lost password?
-                                        </a>
-												</div>
-
-
-												<button type="submit" class="theme_button block_button color1">Log In</button>
-											</form>
-
-											<p class="topmargin_10 text-center grey highlightlinks">
-                                    Not a member yet? <a href="shop-register.html">Register now</a>
-                                </p>
-
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="#" class="small-text">Sign up</a>
-								</li>
-							</ul>
-
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-			<header class="page_header header_white toggler_xs_right">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-sm-12 display_table">
-							<div class="header_left_logo display_table_cell">
-								<a href="index.aspx" class="logo top_logo">
-									<img src="images/logo.png" alt="">
-								</a>
-							</div>
-
-							<div class="header_mainmenu display_table_cell text-center">
-								<!-- main nav start -->
-								<nav class="mainmenu_wrapper">
-									<ul class="mainmenu nav sf-menu">
-										<li class="active"><a href="index.aspx">Home</a></li>
-										<li><a href="login-student.aspx">Student Login</a></li>
-										<li><a href="login-teacher.aspx">Teacher Login</a></li>
-                                        <li><a href="login-parents.aspx">Parent  Login</a></li>
-</ul>
-								</nav>
-								<!-- eof main nav -->
-								<!-- header toggler -->
-								<span class="toggle_menu">
-									<span></span>
-								</span>
-							</div>
-
-							<div class="header_right_buttons display_table_cell text-right ls">
-								<ul class="inline-list menu darklinks">
-									
-									<li>
-										<div class="dropdown cart-dropdown">
-											<a href="#" id="cart" data-target="#" data-toggle="dropdown" title="View your shopping cart" class="cart-contents small-text header-button">
-												<i class="fa fa-sign-in" aria-hidden="true"></i> Login
-											</a>
-											<div class="dropdown-menu widget_shopping_cart">
-												<div class="widget_shopping_cart_content">
-													<p class="buttons content-justify">
-                                        <a href="login-student.aspx" class="theme_button color1 inverse">Student</a>
-                                        <a href="login-teacher.aspx" class="theme_button color1">Teacher</a>
-                                        <a href="login-parents.aspx" class="theme_button color1">Parent</a>
-                                    </p>
-												</div>
-											</div>
-										</div>
-									</li>
-
-									<li>
-										<div class="dropdown cart-dropdown">
-											<a href="#" id="cart" data-target="#" data-toggle="dropdown" title="View your shopping cart" class="cart-contents small-text header-button">
-												<i class="fa fa-sign-up" aria-hidden="true"></i> Sign Up
-											</a>
-											<div class="dropdown-menu widget_shopping_cart">
-												<div class="widget_shopping_cart_content">
-													<p class="buttons content-justify">
-                                        <a href="register-student.aspx" class="theme_button color1 inverse">Student</a>
-                                        <a href="register-teacher.aspx" class="theme_button color1">Teacher</a>
-                                                        <a href="register-parents.aspx" class="theme_button color1">Parent</a>
-                                    </p>
-												</div>
-											</div>
-										</div>
-									</li>```
-
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-
-
-
-            <section id="slider">
-                <div id="full-slider-wrapper">
-                    <div id="layerslider" style="width:100%;height:500px;">
-                        <div class="ls-slide" data-ls="transition2d:1;timeshift:-1000;">
-                            <img src="sld/images/sliderimages/bg.png" class="ls-bg" alt="Slide background"/>
-                            <h3 class="ls-l" style="left:50px; top:135px; padding: 15px; color: #444444;font-size: 24px;font-family: 'Open Sans'; font-weight: bold; text-transform: uppercase;" data-ls="offsetxin:0;durationin:2500;delayin:500;durationout:750;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotateout:-90;transformoriginout:left bottom 0;">Make any </h3>
-                            <h1 class="ls-l" style="left: 63px; top:185px;background: #e96969;padding:0 10px; opacity: 1; color: #ffffff; font-size: 36px; font-family: 'Open Sans'; text-transform: uppercase; font-weight: bold;" data-ls="offsetxin:left;durationin:3000; delayin:800;durationout:850;rotatexin:90;rotatexout:-90;">video your lesson</h1>
-                            <p class="ls-l" style="font-weight:600;left:62px; top:250px; opacity: 1;width: 450px; color: #444; font-size: 14px; font-family: 'Open Sans';" data-ls="offsetyin:top;durationin:4000;rotateyin:90;rotateyout:-90;durationout:1050;">Pick a video, add your magical touch and track your students' understanding</p>
-                            <a href="#" class="ls-l button" style="border-radius:4px;text-align:center;left:63px; top:315px;background: #444;color: #ffffff;font-family: 'Open Sans';font-size: 14px;display: inline-block; text-transform: uppercase; font-weight: bold;" data-ls="durationout:850;offsetxin:90;offsetxout:-90;duration:4200;fadein:true;fadeout:true;">Sign up</a>
-                            <img class="ls-l" src="sld/images/sliderimages/layer1.png" alt="layer 1" style="top:55px; left:700px;" data-ls="offsetxin:right;durationin:3000; delayin:600;durationout:850;rotatexin:-90;rotatexout:90;">
-                            <img class="ls-l ls-linkto-2" style="top:400px;left:50%;white-space: nowrap;" data-ls="offsetxin:-50;delayin:1000;rotatein:-40;offsetxout:-50;rotateout:-40;" src="sld/images/sliderimages/left.png" alt="">
-                            <img class="ls-l ls-linkto-2" style="top:400px;left:52%;white-space: nowrap;" data-ls="offsetxin:50;delayin:1000;offsetxout:50;" src="sld/images/sliderimages/right.png" alt="">
-                        </div>
-                        <div class="ls-slide" data-ls="transition2d:1;timeshift:-1000;">
-                            <img src="sld/images/sliderimages/bg2.png" class="ls-bg" alt="Slide background"/>
-                            <h1 class="ls-l" style="left: 50%; top:200px;background: #e96969;padding:0 10px; opacity: 1; color: #ffffff; font-size: 36px; font-family: 'Open Sans'; text-transform: uppercase; font-weight: bold;" data-ls="offsetxin:left;durationin:3000; delayin:800;durationout:850;rotatexin:90;rotatexout:-90;">Reinforce accountability</h1>
-                            <p class="ls-l" style="text-align:center; font-weight:600;left:50%; top:265px; opacity: 1;width: 450px; color: #444; font-size: 14px; font-family: 'Open Sans';" data-ls="offsetyin:top;durationin:4000;rotateyin:90;rotateyout:-90;durationout:1050;">Know if your students are watching your videos, how many times per section and if they're understanding the content</p>
-                            <img class="ls-l ls-linkto-1" style="top:400px;left:50%;white-space: nowrap;" data-ls="offsetxin:-50;delayin:1000;rotatein:-40;offsetxout:-50;rotateout:-40;" src="sld/images/sliderimages/left.png" alt="">
-                            <img class="ls-l ls-linkto-1" style="top:400px;left:52%;white-space: nowrap;" data-ls="offsetxin:50;delayin:1000;offsetxout:50;" src="sld/images/sliderimages/right.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section><!--end slider-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#"><img src="assets/images/logo.png" width="200px" alt="TichEdu"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar"> 
+<!--      <ul class="nav navbar-nav  navbar-center">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Teacher</a></li>
+        <li><a href="#">Student</a></li> 
+        <li><a href="#">Parent</a></li> 
+      </ul>
+ -->      <ul class="nav navbar-nav  navbar-right">
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Login<span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+								<li><a href="login-student.aspx">Student</a></li>
+								<li><a href="login-teacher.aspx">Teacher </a></li>
+								<li><a href="login-parents.aspx">Parent </a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Sign up<span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+								<li><a href="register-student.aspx">Student</a></li>
+								<li><a href="register-teacher.aspx"> Teacher</a></li>
+								<li><a href="register-parents.aspx">Parent </a></li>
+			  </ul>
+			</li>
+      </ul>
+	  
+    </div>
+  </div>
+</nav>
 
 
 
 
-			<section class="ls section_padding_top_100 section_padding_bottom_100 columns_margin_bottom_30 columns_padding_25 table_section table_section_md">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="with_pos_button left_button">
-								<img src="images/ab1.png" alt="" />
-							</div>
-						</div>
-						<div class="col-md-6">
-							<h2 class="section_header highlight">
-								Make any video your lesson
-							</h2>
-							<p>
-					Pick a video, add your magical touch and track your students' understanding
-				</p>
-							<p class="topmargin_30">
-					<a href="#" class="read-more">Sign up</a>
-				</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<section class="ls section_padding_top_100 section_padding_bottom_100 columns_margin_bottom_30 columns_padding_25 table_section table_section_md">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<h2 class="section_header highlight">
-								Reinforce accountability
-							</h2>
-							<p>
-					Know if your students are watching your videos, how many times per section and if they're understanding the content
-				</p>
-							<p class="topmargin_30">
-				</p>
-						</div>
-						
-						
-						<div class="col-md-6">
-							<div class="with_pos_button left_button">
-								<img src="images/ab2.png" alt="" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top:90px;">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-			<section class="ls section_padding_top_100 section_padding_bottom_100 columns_margin_bottom_30 columns_padding_25 table_section table_section_md">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="with_pos_button left_button">
-								<img src="images/ab3.png" alt="" />
-							</div>
-						</div>
-						<div class="col-md-6">
-							<h2 class="section_header highlight">
-								Engage students easily
-							</h2>
-							<p>
-					Enable self-paced learning with interactive lessons, just add your voice and questions within the video.
-				</p>
-							<p class="topmargin_30">
-				</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<section class="ls section_padding_top_100 section_padding_bottom_100 columns_margin_bottom_30 columns_padding_25 table_section table_section_md">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<h2 class="section_header highlight">
-								Save time
-							</h2>
-							<p>
-					Take already existing videos from YouTube, Khan Academy, Crash Course… or upload your own.
-				</p>
-							<p class="topmargin_30">
-				</p>
-						</div>
-						
-						
-						<div class="col-md-6">
-							<div class="with_pos_button left_button">
-								<img src="images/ab4.png" alt="" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="assets/images/sl-bg.jpg" width="100%">
+      <div class="carousel-caption slcp">
+	  	<img src="assets/images/layer1.png" class="slan" width="30%" style="float:left;">
+        <h3>TichEdu</h3>
+        <p>Teach one, save one<br><br><a href="register-teacher.aspx"><button type="button" class="btn" style="background-color: #e96969;">Sign up</button></a></p>
+     </div>
+    </div>
 
-			<section class="cs page_copyright section_padding_15 with_top_border_container">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 text-center">
-							<p>Designed by AimSoft</p>
-						</div>
-					</div>
-				</div>
-			</section>
+    <div class="item">
+      <img src="assets/images/sl-bg.jpg" width="100%">
+      <div class="carousel-caption slcp">
+	  	<img src="assets/images/layer2.png" class="slan" width="40%" style="float:left;">
+        <h3>TichEdu</h3>
+        <p>Any time, Anywhere<br><br><a href="register-student.aspx"><button type="button" class="btn" style="background-color: #e96969;">Sign up</button></a></p>
+     </div>
+    </div>
 
-		</div>
-		<!-- eof #box_wrapper -->
-	</div>
-	<!-- eof #canvas -->
-
-	<script src="js/compressed.js"></script>
-	<script src="js/main.js"></script>
+    <div class="item">
+      <img src="assets/images/sl-bg.jpg" width="100%">
+      <div class="carousel-caption slcp">
+	  	<img src="assets/images/layer3.png" class="slan" width="30%" style="float:left;">
+        <h3>TichEdu</h3>
+        <p>Save time <br><br><a href="register-parents.aspx"><button type="button" class="btn" style="background-color: #e96969;">Sign up</button></a></p>
+     </div>
+    </div>
 	
 	
-	<!-- script files -->
-<script src="sld/bower_components/what-input/what-input.js"></script>
-<script src="sld/bower_components/foundation-sites/dist/foundation.js"></script>
-<script src="sld/js/jquery.showmore.src.js" type="text/javascript"></script>
-<script src="sld/js/app.js"></script>
-<script src="sld/layerslider/js/greensock.js" type="text/javascript"></script>
-<!-- LayerSlider script files -->
-<script src="sld/layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
-<script src="sld/layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
-<script src="sld/js/owl.carousel.min.js"></script>
-<script src="sld/js/inewsticker.js" type="text/javascript"></script>
-<script src="sld/js/jquery.kyco.easyshare.js" type="text/javascript"></script>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 
+
+<!--
+<section class="nwet">
+	<div class="container">
+		<div class="row">
+			
+
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<div class="nwss">
+					<h3>News</h3>
+					<marquee direction="up" loop="true" onMouseOver="this.stop();" onMouseOut="this.start();" height="360px">
+					<ul class="nwsul">
+                        <asp:Repeater ID="Repeater1" runat="server">
+                            <ItemTemplate>
+                                   <li><a href="#"><h4>News </h4> <%# Eval("News_date") %>  <strong><%# Eval("News_title") %> </strong><%# Eval("News_details") %> </a> </li>
+                            </ItemTemplate>
+                         
+
+                        </asp:Repeater>
+
+
+
+					<li><a href="#"><h4>News 1</h4>  <strong>dd/mm/yyy </strong>News Line Here News Line Here News Line Here News Line Here News Line Here</a> </li>
+					<li><a href="#"><h4>News 1</h4>  <strong>dd/mm/yyy </strong>News Line Here News Line Here News Line Here News Line Here News Line Here</a> </li>
+					<li><a href="#"><h4>News 2</h4>  <strong>dd/mm/yyy </strong>News Line Here News Line Here News Line Here News Line Here News Line Here</a> </li>
+					<li><a href="#"><h4>News 3</h4>  <strong>dd/mm/yyy </strong>News Line Here News Line Here News Line Here News Line Here News Line Here</a> </li>
+					<li><a href="#"><h4>News 4</h4>  <strong>dd/mm/yyy </strong>News Line Here News Line Here News Line Here News Line Here News Line Here</a> </li>
+					<li><a href="#"><h4>News 5</h4>  <strong>dd/mm/yyy </strong>News Line Here News Line Here News Line Here News Line Here News Line Here</a> </li>
+					<li><a href="#"><h4>News 6</h4>  <strong>dd/mm/yyy </strong>News Line Here News Line Here News Line Here News Line Here News Line Here</a> </li>
+					<li><a href="#"><h4>News 7</h4>  <strong>dd/mm/yyy </strong>News Line Here News Line Here News Line Here News Line Here News Line Here</a> </li>
+					</ul>
+					</marquee>	
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 drbg1" style=" min-height:542px; margin:auto; display:block;" >
+			<h3>Events</h3>
+				
+
+			https://bootsnipp.com/snippets/featured/event-list
+				<ul class="event-list ">
+                    <asp:Repeater ID="Repeater2" runat="server">
+                        <ItemTemplate>
+                            <li>
+						<time style="width:auto" datetime="<%# Eval("Date") %>">
+							<span class="month"  ><%# Eval("Date") %> </span>
+							
+						</time>
+						<div class="info">
+							<h4 class="title"><%# Eval("Eventtitle") %></h4>
+							<p class="desc"><%# Eval("Eventdetails") %> </p>
+						</div>
+					</li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+					
+
+					<!--<li>
+						<time datetime="2014-07-20 2000">
+							<span class="day">20</span>
+							<span class="month">Jan</span>
+							<span class="year">2014</span>
+							<span class="time">8:00 PM</span>
+						</time>
+						<div class="info">
+							<h4 class="title">Event Title Here</h4>
+							<p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+						</div>
+					</li>
+
+					<li>
+						<time datetime="2014-07-20 2000">
+							<span class="day">20</span>
+							<span class="month">Jan</span>
+							<span class="year">2014</span>
+							<span class="time">8:00 PM</span>
+						</time>
+						<div class="info">
+							<h4 class="title">Event Title Here</h4>
+							<p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>--->
+
+
+<section>
+	<div class="container">
+		<div class="row">
+		  <div class="col-md-6">
+				<img src="assets/images/ab1.png" style="width:100%">
+		  </div>
+		  <div class="col-md-6 vam">
+				<h2>Chat Math</h2>
+				<p>Join our math discussions and share your knowledge with other math students on our engaging chat platforms</p>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-md-6 vam">
+				<h2>Monitor Student activities </h2>
+				<p>Parents and teachers can see when and what students have accessed onsite as well as the progress. Once teachers has posted activities, parents get a summary with notifications of what’s new for students </p>
+		  </div>
+		  <div class="col-md-6">
+				<img src="assets/images/ab2.png" style="width:100%">
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-md-6">
+				<img src="assets/images/ab3.png" style="width:100%">
+		  </div>
+		  <div class="col-md-6 vam">
+				<h2>Updates </h2>
+				<p>Parents, teachers and students get news updates to keep them in touch with educational innovations and changes around them</p>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-md-6 vam">
+				<h2>Online Assessment </h2>
+				<p>Assess your knowledge levels at your own time in the comfort of your own settings. Take an assessment, get graded as you complete and get corrections  </p>
+		  </div>
+		  <div class="col-md-6">
+				<img src="assets/images/ab4.png" style="width:100%">
+		  </div>
+		</div>
+		
+		
+		<div class="row">
+		  <div class="col-md-6">
+				<img src="assets/images/ab5.png" style="width:100%">
+		  </div>
+		  <div class="col-md-6 vam">
+				<h2>Save time </h2>
+				<p>Brings students together online and save travel time. Students can learn at their convenient time with minimal supervision</p>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-md-6 vam">
+				<h2>Quality tutorials</h2>
+				<p>Students have access to quality materials from the best tutors around the world. </p>
+		  </div>
+		  <div class="col-md-6">
+				<img src="assets/images/ab6.png" style="width:100%">
+		  </div>
+		</div>
+	</div>
+</section>
+
+<footer class="cra">
+Designed by <a href="#">AimSoft</a>
+</footee>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="assets/js/custom.js"></script>
 </body>
-</html>

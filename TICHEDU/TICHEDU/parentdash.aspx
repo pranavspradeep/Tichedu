@@ -148,7 +148,8 @@
 							</a>	
 								<ul class="nav menu-click">
                                     <li> <asp:LinkButton ID="Student_Recent_Activity"  OnClick="Student_Recent_Activity_Click" runat="server">Recent Student Activities</asp:LinkButton></li>
-									<!--<li >
+								 <li> <asp:LinkButton ID="Result"  OnClick="Result_Click" runat="server">Results</asp:LinkButton></li>
+                                    <!--<li >
 								   
 									 <asp:LinkButton ID="Pdfnoteslink_btn"  OnClick="Pdfnoteslink_btn_Click" runat="server">Pdf Notes</asp:LinkButton>
 								
@@ -299,7 +300,8 @@
 
 			<section class="ls page_portfolio section_padding_top_10 section_padding_bottom_75">
                 <div class="container">
-<h3 class="h3">Student Recent Activities</h3>				
+<h3 class="h3">Student Recent Activities</h3>	
+ 
 <asp:DataList ID="StudentActivity_Tbl" runat="server">
     <HeaderTemplate>
         <table class="table table-hover  tbody tr:hover td {

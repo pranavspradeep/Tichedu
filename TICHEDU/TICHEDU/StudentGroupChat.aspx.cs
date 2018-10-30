@@ -17,7 +17,7 @@ public partial class Studentgroupchat : System.Web.UI.Page
     public string userkey { set; get; }
     string clientid = "556887803694-s1iakv1ep16bgvupkp3suh2jc549922j.apps.googleusercontent.com";
     string clientsecret = "hE1s29hJqp2u-p4yLefbZWHb";
-    string redirection_url = "http://www.tichedu.com/student.aspx";
+    string redirection_url = "http://www.TichEdu.com/student.aspx";
     string url = "https://accounts.google.com/o/oauth2/token";
     public class Tokenclass
     {
@@ -272,5 +272,11 @@ public partial class Studentgroupchat : System.Web.UI.Page
     {
         Session["userkey"] = userkey;
         Response.Redirect("StudentGroupChat.aspx?student=" + userkey);
+    }
+
+    protected void exam_Click(object sender, EventArgs e)
+    {
+        Session["userkey"] = userkey;
+        Response.Redirect("SelectExam.aspx?student=" + userkey);
     }
 }

@@ -200,7 +200,7 @@
 								
 								
 								<div class="col-sm-6">
-									<label>Where you here about tichedu</label>
+									<label>Where did you here about TichEdu</label>
 									<textarea rows="3" cols="10" runat="server" autofocus id="WyouHere_txtbox" type="text" class="form-control"></textarea>
 								</div>
 								<div class="col-sm-2">

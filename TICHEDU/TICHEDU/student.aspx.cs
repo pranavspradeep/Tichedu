@@ -15,9 +15,9 @@ using System.Web.UI.WebControls;
 public partial class student : System.Web.UI.Page
 {
     public string userkey { set; get; }
-    string clientid = "122415916779-7bhspojqe33c5t6sjr1m894ju3e3joks.apps.googleusercontent.com";
-    string clientsecret = "a_oOseuX0mNsaye_MLguzjLj";
-    string redirection_url = "http://www.tichedu.com/student.aspx";
+    string clientid = "249797267239-eagt226h77mtc3csfcgej0hn6fqcus42.apps.googleusercontent.com";
+    string clientsecret = "7igXmjOqdERcmTj6m40Z4LGW";
+    string redirection_url = "http://www.TichEdu.in/Edu/student";
     string url = "https://accounts.google.com/o/oauth2/token";
     public class Tokenclass
     {
@@ -270,5 +270,11 @@ public partial class student : System.Web.UI.Page
     {
         Session["userkey"] = userkey;
         Response.Redirect("StudentGroupChat.aspx?student=" + userkey);
+    }
+
+    protected void examlink_Click(object sender, EventArgs e)
+    {
+        Session["userkey"] = userkey;
+        Response.Redirect("SelectExam.aspx?student=" + userkey);
     }
 }

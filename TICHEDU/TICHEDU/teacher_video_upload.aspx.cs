@@ -65,7 +65,10 @@ public partial class teacher_video_upload : System.Web.UI.Page
         //Response.Redirect(Request.Url.AbsoluteUri);
        
     }
-
+    protected void studentactivity_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("teacher_Result.aspx/?teacher=" + userkey);
+    }
     protected void Content_link_Click(object sender, EventArgs e)
     {
         Response.Redirect("teacher.aspx?teacher="+ userkey);

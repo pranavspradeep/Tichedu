@@ -17,7 +17,7 @@ public partial class parentdash : System.Web.UI.Page
 {
     string clientid = "556887803694-s1iakv1ep16bgvupkp3suh2jc549922j.apps.googleusercontent.com";
     string clientsecret = "hE1s29hJqp2u-p4yLefbZWHb";
-    string redirection_url = "http://www.tichedu.com/teacher.aspx";
+    string redirection_url = "http://www.TichEdu.com/teacher.aspx";
     string url = "https://accounts.google.com/o/oauth2/token";
     public class Tokenclass
     {
@@ -242,5 +242,10 @@ public partial class parentdash : System.Web.UI.Page
     {
         Response.Redirect("parentdash.aspx/?teacher=" + userkey);
 
+    }
+
+    protected void Result_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("parentExamResult.aspx/?teacher=" + userkey);
     }
 }

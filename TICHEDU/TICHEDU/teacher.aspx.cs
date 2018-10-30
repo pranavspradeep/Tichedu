@@ -15,9 +15,9 @@ using System.Web.UI.WebControls;
 
 public partial class teacher : System.Web.UI.Page
 {
-    string clientid = "122415916779-7bhspojqe33c5t6sjr1m894ju3e3joks.apps.googleusercontent.com";
-    string clientsecret = "a_oOseuX0mNsaye_MLguzjLj";
-    string redirection_url = "http://www.tichedu.com/teacher.aspx";
+    string clientid = "249797267239-eagt226h77mtc3csfcgej0hn6fqcus42.apps.googleusercontent.com";
+    string clientsecret = "7igXmjOqdERcmTj6m40Z4LGW";
+    string redirection_url = "http://www.TichEdu.in/Edu/teacher";
     string url = "https://accounts.google.com/o/oauth2/token";
     public class Tokenclass
     {
@@ -52,8 +52,29 @@ public partial class teacher : System.Web.UI.Page
         lblName.Visible = false;
 
         userkey = Request.QueryString["teacher"];
+        if (userkey == null)
+        { if(Session["userkey"]==null)
+            {
 
+            }else
+            {
+                userkey = Session["userkey"].ToString();
+            }
+         
+        }
+        
+        if (userkey==null)
+        {   if (Session["userid"] == null)
+            {
 
+            }
+            else
+            {
+                userkey = Session["userid"].ToString();
+            }
+         
+        }
+       
 
         if (!IsPostBack)
         {
@@ -64,7 +85,11 @@ public partial class teacher : System.Web.UI.Page
                 lblName.Visible = true;
             }
         }
-        if(userkey==null)
+
+
+
+
+        if (userkey == null)
         {
             userkey = Session["userid"].ToString();
             if (GoogleProfileimage.ImageUrl == "" || lblName.Text == "")
@@ -77,12 +102,12 @@ public partial class teacher : System.Web.UI.Page
             }
         }
 
-        
-      
 
-          
-            
-        
+
+
+
+
+
 
         BindDataList(userkey);
     }
@@ -136,14 +161,31 @@ public partial class teacher : System.Web.UI.Page
 
     }
 
-
+    protected void delete_Click(object sender, EventArgs e)
+    {
+        string strConnString = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
+        int id = 0;
+        LinkButton myButton = sender as LinkButton;
+        if (myButton != null)
+        {
+            id = Convert.ToInt32(myButton.CommandArgument);
+        }
+        SqlConnection connection = new SqlConnection(strConnString);
+        connection.Open();
+        SqlCommand cmd = new SqlCommand("deleteVideo", connection);
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@id", id);
+        cmd.ExecuteNonQuery();
+        BindDataList(userkey);
+        connection.Close();
+    }
 
 
     protected void Upload_link_button_Click(object sender, EventArgs e)
     {
-        
-            
-            Response.Redirect("teacher_video_upload.aspx/?teacher=" + userkey);
+
+        Session["userkey"] = userkey;
+        Response.Redirect("teacher_video_upload.aspx/?teacher=" + userkey);
         
         
     }
@@ -170,18 +212,20 @@ public partial class teacher : System.Web.UI.Page
 
     protected void Profile_link_button_Click(object sender, EventArgs e)
     {
-        
-            
-            Response.Redirect("teacher-profile.aspx/?teacher=" + userkey);
+
+        Session["userkey"] = userkey;
+        Response.Redirect("teacher-profile.aspx/?teacher=" + userkey);
         
        
     }
 
     protected void Pdfnoteslink_btn_Click(object sender, EventArgs e)
-    {  
-            Response.Redirect("PdfnotesView.aspx/?teacher=" + userkey);
-        
-        
+    {
+        Session["userkey"] = userkey;
+        Session["userid"] = userkey;
+        Response.Redirect("PdfnotesView.aspx/?teacher=" + userkey);
+       
+
     }
 
 
@@ -197,27 +241,44 @@ public partial class teacher : System.Web.UI.Page
     }
 
     protected void AddVideo_Click(object sender, EventArgs e)
-    {  
-            Response.Redirect("TeacherVideoUpload.aspx/?teacher=" + userkey);
+    {
+        Session["userkey"] = userkey;
+        Response.Redirect("TeacherVideoUpload.aspx/?teacher=" + userkey);
         
         
     }
 
     protected void youtube_videos_link_Click(object sender, EventArgs e)
-    {   
-            Response.Redirect("Youtubevideosupload-listing.aspx/?teacher=" + userkey);
+    {
+        Session["userkey"] = userkey;
+        Response.Redirect("Youtubevideosupload-listing.aspx/?teacher=" + userkey);
         
     }
 
     protected void Groupchat_Click(object sender, EventArgs e)
     {
+        Session["userkey"] = userkey;
         Response.Redirect("Teachergroupchat.aspx/?teacher=" + userkey);
 
     }
 
     protected void whiteboard_Click(object sender, EventArgs e)
     {
-
+        Session["userkey"] = userkey;
         Response.Redirect("teacher-whiteboard.aspx/?teacher=" + userkey);
+    }
+
+    protected void studentactivity_Click(object sender, EventArgs e)
+    {
+        Session["userkey"] = userkey;
+        Response.Redirect("teacher_Result.aspx/?teacher=" + userkey);
+
+        
+    }
+
+    protected void addquestion_Click(object sender, EventArgs e)
+    {
+        Session["userkey"] = userkey;
+        Response.Redirect("AddQuestion.aspx/?teacher=" + userkey);
     }
 }

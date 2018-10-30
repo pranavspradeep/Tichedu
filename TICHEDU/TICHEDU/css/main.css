@@ -856,55 +856,6 @@ input[type*="password"],
 	background-color: #444444;
 }
 
-.carousel-control.left,
-.carousel-control.right {
-	border: 1px solid #ffffff;
-	color: #ffffff;
-	border-radius: 0px;
-	width: 50px;
-	height: 50px;
-	left: -50px;
-	top: 50%;
-	margin-top: -25px;
-	text-shadow: none;
-	opacity: 1;
-	background-image: none;
-	filter: alpha(opacity=100);
-	text-align: center;
-}
-
-.carousel-control.right {
-	right: -50px;
-}
-
-.carousel:hover .carousel-control {
-	left: 50px;
-}
-
-.carousel:hover .carousel-control.right {
-	left: auto;
-	right: 50px;
-}
-
-.carousel-control.left span,
-.carousel-control.right span {
-	font-family: 'rt-icons-2';
-	width: 50px;
-	height: 50px;
-	margin: 0;
-	font-size: 16px;
-	left: 0;
-	top: 0;
-	line-height: 50px;
-}
-
-.carousel-control .icon-prev:before {
-	content: "\e7c4";
-}
-
-.carousel-control .icon-next:before {
-	content: "\e7c5";
-}
 
 /* collapse accordion */
 .panel-heading .panel-title {
@@ -1496,21 +1447,8 @@ td .media-body {
 }
 
 /* bootstrap dropdown menu */
-.dropdown-menu {
-	box-shadow: none;
-	border-radius: 0;
-	border: 2px solid #444444;
-	z-index: 1001;
-	font-size: 14px;
-	margin-top: 0;
-	padding-left: 0;
-	padding-right: 0;
-}
 
-[class*="right"] .dropdown-menu {
-	right: 0;
-	left: auto;
-}
+
 
 .nav .open > .header-button,
 .nav .open > .header-button:hover,
@@ -1518,11 +1456,6 @@ td .media-body {
 	background-color: transparent;
 }
 
-.dropdown-menu > li > a:focus,
-.dropdown-menu > li > a:hover {
-	color: #323232;
-	background-color: transparent;
-}
 
 .dropdwon-menu-title {
 	padding: 10px 30px;

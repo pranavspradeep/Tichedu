@@ -148,14 +148,14 @@
 								<ul class="nav menu-click">
 									<li class="active">
 										
-									 <asp:LinkButton ID="Pdfnoteslink_btn"  OnClick="Pdfnoteslink_btn_Click" runat="server">Pdf Notes</asp:LinkButton>
+									 <asp:LinkButton ID="Pdfnoteslink_btn"  OnClick="Pdfnoteslink_btn_Click" runat="server">TichEdu Pdf Notes</asp:LinkButton>
 								
 
 
 									</li>
                                     <li>
 											
-									 <asp:LinkButton ID="video_link"  OnClick="video_link_Click" runat="server">Videos</asp:LinkButton>
+									 <asp:LinkButton ID="video_link"  OnClick="video_link_Click" runat="server">TichEdu Videos</asp:LinkButton>
 								
 									</li>
 									<!--<li>
@@ -163,25 +163,28 @@
 									</li>-->
 									
 									<li>
-										<a href="selectexam.aspx">Exam</a>
+										<a href="selectexam.aspx">TichEdu Exam</a>
 									</li>
 									<li>
-										 <asp:LinkButton ID="Youtubevideos"  OnClick="Youtubevideos_Click" runat="server">YouTube Videos</asp:LinkButton>
+										 <asp:LinkButton ID="Youtubevideos"  OnClick="Youtubevideos_Click" runat="server">TichEdu YouTube Videos</asp:LinkButton>
 									</li>
 									<li>
-										 <asp:LinkButton ID="Youtubelive"  OnClick="Youtubelive_Click" runat="server">YouTube Tichedu Live</asp:LinkButton>
+										 <asp:LinkButton ID="Youtubelive"  OnClick="Youtubelive_Click" runat="server">TichEdu YouTube Live</asp:LinkButton>
 									</li>
                                     <li>
 										<g:sharetoclassroom url="http://url-to-share" size="32"></g:sharetoclassroom>
                                         <asp:Label ID="Label1" runat="server" Text="Google Classroom"></asp:Label>
 									</li>
                                     <li>
-										 <asp:LinkButton ID="Groupchat" OnClick="Groupchat_Click" runat="server">Group Chat</asp:LinkButton>
+										 <asp:LinkButton ID="Groupchat" OnClick="Groupchat_Click" runat="server">TichEdu Group Chat</asp:LinkButton>
 									</li>
                                       <li>
-										 <asp:LinkButton ID="whiteboard" OnClick="whiteboard_Click" runat="server">White Board</asp:LinkButton>
+										 <asp:LinkButton ID="whiteboard" OnClick="whiteboard_Click" runat="server">TichEdu White Board</asp:LinkButton>
 									</li>
-									
+									 <li>
+<asp:LinkButton ID="studentactivity" OnClick="studentactivity_Click" runat="server">TichEdu Student Activity</asp:LinkButton>
+</li>
+
 									<!-- eof pages -->
 								</ul>
 							</nav>

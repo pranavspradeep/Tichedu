@@ -87,9 +87,9 @@ public partial class register_student : System.Web.UI.Page
 
     public void sentmail(string firstname, string email)
     {
-        string s = "<html><body> <table border=3 color=blue width=700> <tr><td><font color=blue><table border=0 color=green><tr><td><img src=http://www.tichedu.com/images/logo.png width=700></img></td></tr><tr><td>" +
+        string s = "<html><body> <table border=3 color=blue width=700> <tr><td><font color=blue><table border=0 color=green><tr><td><img src=http://www.TichEdu.com/images/logo.png width=700></img></td></tr><tr><td>" +
        "<h2><font color=Green> " + firstname + "  A BIG THANK YOU!!! </h2> <h1> & WELCOME STUDENT </h1></font><br><hr forecolor=Red> " +
-       "<p><font color=blue> <h3>www.tichedu.com would like to welcome you as a new customer to our firm. We know " +
+       "<p><font color=blue> <h3>www.TichEdu.com would like to welcome you as a new customer to our firm. We know " +
        "that you will be extremely satisfied with our  service we provide" +
        "to our customers. <br><br>" +
        "We Offer discount and wide range of medicine and Healthcare Products under one roof." +
@@ -101,8 +101,8 @@ public partial class register_student : System.Web.UI.Page
        "</h3></p></font><br><br> <font size=4 color=Red><b><i>Very truly.<br>" +
        "<br>" +
 
-       "www.tichedu.com <br>" +
-       "info@tichedu.com <br>" +
+       "www.TichEdu.com <br>" +
+       "info@TichEdu.com <br>" +
        "</td></tr></table></td></tr></table></body></html>";
 
         //< br><h2> Now Get Medicines at your door step with real price from India's No1 Pharamacy Distributor </h2><br>" +
@@ -127,7 +127,7 @@ public partial class register_student : System.Web.UI.Page
 
 
         string smtpServer = "localhost";
-        string userName = "info@tichedu.com";
+        string userName = "info@TichEdu.com";
         string password = "tich@2018";
         int cdoBasic = 1;
         int cdoSendUsingPort = 2;
@@ -136,14 +136,14 @@ public partial class register_student : System.Web.UI.Page
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpserverport", 25);
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusing", cdoSendUsingPort);
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate", cdoBasic);
-        msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", "info@tichedu.com");
+        msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", "info@TichEdu.com");
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendpassword", "tich@2018");
         msg.To = email;
         msg.Bcc = "anishpr2k3@gmail.com";
-        msg.From = "info@tichedu.com";
+        msg.From = "info@TichEdu.com";
         msg.Priority = MailPriority.High;
         msg.BodyFormat = MailFormat.Html;
-        msg.Subject = Request.Form["Firstname_txtbox"] + " Welcome to Tichedu.com";
+        msg.Subject = Request.Form["Firstname_txtbox"] + " Welcome to TichEdu.com";
         msg.Body = s;
         SmtpMail.SmtpServer = smtpServer;
         SmtpMail.Send(msg);

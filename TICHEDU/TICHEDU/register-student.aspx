@@ -88,6 +88,7 @@
 										<li class="active"><a href="index.aspx">Home</a></li>
 										<li><a href="login-student.aspx">Student Login</a></li>
 										<li><a href="login-teacher.aspx">Teacher Login</a></li>
+                                        <li><a href="login-parents.aspx">Parent Login</a></li>
 </ul>
 								</nav>
 								<!-- eof main nav -->
@@ -199,7 +200,7 @@
 								
 								
 								<div class="col-sm-6">
-									<label>Where you here about tichedu</label>
+									<label>Where did you here about TichEdu</label>
 									<textarea rows="3" cols="10" id="Whereyhere"  runat="server" type="text" class="form-control"></textarea>
 								</div>
 								<div class="col-sm-2">

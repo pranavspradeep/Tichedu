@@ -27,14 +27,22 @@ public partial class student_profile : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         userkey = Request.QueryString["teacher"];
+        
+        
+         if(userkey=="")
+        {
+            userkey = Session["userkey"].ToString(); 
+        }
+        if (userkey == "")
+        {
+            userkey = Session["userid"].ToString();
+        }
         Fetch_profile_teacher();
-        if(Teacher_name_firstname.Text=="")
+        if (Teacher_name_firstname.Text == "")
         {
             image_v.Src = Session["image-url"].ToString();
             Teacher_name_firstname.Text = Session["username"].ToString();
         }
-          
-        
     }
 
     public void Fetch_profile_teacher()
@@ -47,7 +55,7 @@ public partial class student_profile : System.Web.UI.Page
         SqlConnection conn = new SqlConnection(strConnString);
 
         //Create command
-        SqlCommand cmd = new SqlCommand("select * from TBL_TEACHER_REGISTRATION where TEACHER_ID="+userkey, conn);
+        SqlCommand cmd = new SqlCommand("select * from TBL_TEACHER_REGISTRATION where TEACHER_ID=" + userkey, conn);
 
         try
         {

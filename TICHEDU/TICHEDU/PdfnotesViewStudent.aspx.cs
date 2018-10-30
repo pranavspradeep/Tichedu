@@ -168,4 +168,10 @@ public partial class PdfnotesViewStudent : System.Web.UI.Page
     {
         Response.Redirect("StudentGroupChat.aspx/?student=" + userkey);
     }
+
+    protected void exam_Click(object sender, EventArgs e)
+    {
+        Session["userkey"] = userkey;
+        Response.Redirect("SelectExam.aspx?student=" + userkey);
+    }
 }

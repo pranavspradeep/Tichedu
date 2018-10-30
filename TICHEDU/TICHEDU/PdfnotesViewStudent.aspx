@@ -140,22 +140,22 @@
 							</a>	
 								<ul class="nav menu-click">
 									<li class="active">
-										<a href="#">Pdf Notes</a></li>
+										<a href="#">TichEdu Pdf Notes</a></li>
 									
 										<li>
-                                            <asp:LinkButton ID="Videoslink" OnClick="Videoslink_Click"  runat="server">Videos</asp:LinkButton>
+                                            <asp:LinkButton ID="Videoslink" OnClick="Videoslink_Click"  runat="server">TichEdu Tutorials</asp:LinkButton>
 									</li>
 									<li>
-										<a href="#">Exams</a>
+										 <asp:LinkButton ID="exam" OnClick="exam_Click"  runat="server">TichEdu Exam</asp:LinkButton>
 									</li>
                                     <li>
-                                            <asp:LinkButton ID="Youtubevideo" OnClick="Youtubevideo_Click" runat="server">Youtube Videos</asp:LinkButton>
+                                            <asp:LinkButton ID="Youtubevideo" OnClick="Youtubevideo_Click" runat="server">TichEdu Youtube Videos</asp:LinkButton>
 									</li>
 									<li>
-										 <asp:LinkButton ID="Youtubelive"  OnClick="Youtubelive_Click" runat="server">YouTube Tichedu Live</asp:LinkButton>
+										 <asp:LinkButton ID="Youtubelive"  OnClick="Youtubelive_Click" runat="server">TichEdu YouTube  Live</asp:LinkButton>
 									</li>
                                     <li>
-										 <asp:LinkButton ID="Groupchat"  OnClick="Groupchat_Click" runat="server">Group Chat</asp:LinkButton>
+										 <asp:LinkButton ID="Groupchat"  OnClick="Groupchat_Click" runat="server">TichEdu Group Chat</asp:LinkButton>
 									</li>
 									<!-- eof pages -->
 								</ul>
@@ -298,7 +298,7 @@
               
                 
                 <div class="container">
-                    <h2>PDF NOTES</h2>
+                    <h2>TichEdu PDF NOTES</h2>
        <div class="form-inline" >           
   <div class="form-group">
     <p class="text-danger">CLASS</p>

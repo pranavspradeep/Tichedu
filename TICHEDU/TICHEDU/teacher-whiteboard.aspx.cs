@@ -17,7 +17,7 @@ public partial class teacher_whiteboardtest : System.Web.UI.Page
 {
     string clientid = "556887803694-s1iakv1ep16bgvupkp3suh2jc549922j.apps.googleusercontent.com";
     string clientsecret = "hE1s29hJqp2u-p4yLefbZWHb";
-    string redirection_url = "http://www.tichedu.com/teacher.aspx";
+    string redirection_url = "http://www.TichEdu.com/teacher.aspx";
     string url = "https://accounts.google.com/o/oauth2/token";
     public class Tokenclass
     {
@@ -46,14 +46,21 @@ public partial class teacher_whiteboardtest : System.Web.UI.Page
 
     public string code { set; get; }
     protected void Page_Load(object sender, EventArgs e)
-    {
+    {   
         id_label.Visible = false;
         GoogleProfileimage.Visible = false;
         lblName.Visible = false;
 
         userkey = Request.QueryString["teacher"];
 
-
+        if(userkey=="")
+        {
+            userkey = Session["userkey"].ToString(); 
+        }
+        if (userkey == "")
+        {
+            userkey = Session["userid"].ToString();
+        }
 
         if (!IsPostBack)
         {
@@ -66,15 +73,15 @@ public partial class teacher_whiteboardtest : System.Web.UI.Page
         }
         if(userkey==null)
         {
-            userkey = Session["userid"].ToString();
-            if (GoogleProfileimage.ImageUrl == "" || lblName.Text == "")
-            {
+            //userkey = Session["userid"].ToString();
+            //if (GoogleProfileimage.ImageUrl == "" || lblName.Text == "")
+            //{
 
-                GoogleProfileimage.ImageUrl = Session["image-url"].ToString();
-                lblName.Text = Session["username"].ToString();
-                GoogleProfileimage.Visible = true;
-                lblName.Visible = true;
-            }
+            //    GoogleProfileimage.ImageUrl = Session["image-url"].ToString();
+            //    lblName.Text = Session["username"].ToString();
+            //    GoogleProfileimage.Visible = true;
+            //    lblName.Visible = true;
+            //}
         }
 
         
@@ -136,7 +143,10 @@ public partial class teacher_whiteboardtest : System.Web.UI.Page
 
     }
 
-
+    protected void studentactivity_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("teacher_Result.aspx/?teacher=" + userkey);
+    }
 
 
     protected void Upload_link_button_Click(object sender, EventArgs e)

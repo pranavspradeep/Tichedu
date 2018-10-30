@@ -25,7 +25,7 @@ public partial class login_admin : System.Web.UI.Page
     {
         string clientid = "556887803694-s1iakv1ep16bgvupkp3suh2jc549922j.apps.googleusercontent.com";
         string clientsecret = "hE1s29hJqp2u-p4yLefbZWHb";
-        string redirection_url = "http://www.tichedu.com/teacher.aspx";
+        string redirection_url = "http://www.TichEdu.com/teacher.aspx";
         string url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + "";
         Response.Redirect(url);
     }

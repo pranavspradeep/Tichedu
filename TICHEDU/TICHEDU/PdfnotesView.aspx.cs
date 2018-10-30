@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -14,7 +15,33 @@ public partial class teacher : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         userkey = Request.QueryString["teacher"];
-        BindDataList();
+        if (userkey == null)
+        {
+            if (Session["userkey"] == null)
+            {
+
+            }
+            else
+            {
+                userkey = Session["userkey"].ToString();
+            }
+
+        }
+
+        if (userkey == null)
+        {
+            if (Session["userid"] == null)
+            {
+
+            }
+            else
+            {
+                userkey = Session["userid"].ToString();
+            }
+
+        }
+    
+    BindDataList();
     }
 
     protected void Upload_link_button_Click(object sender, EventArgs e)
@@ -44,6 +71,15 @@ public partial class teacher : System.Web.UI.Page
     {
         Response.Redirect("teacher-profile.aspx/?teacher=" + userkey);
     }
+
+    protected void studentactivity_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("teacher_Result.aspx/?teacher=" + userkey);
+    }
+
+
+
+
 
     protected void lnkDownload_Click(object sender, EventArgs e)
     {
@@ -98,5 +134,24 @@ public partial class teacher : System.Web.UI.Page
     {
 
         Response.Redirect("teacher-whiteboard.aspx/?teacher=" + userkey);
+    }
+
+    protected void delete_Click(object sender, EventArgs e)
+    {
+        string strConnString = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
+        int id = 0;
+        LinkButton myButton = sender as LinkButton;
+        if (myButton != null)
+        {
+            id = Convert.ToInt32(myButton.CommandArgument);
+        }
+        SqlConnection connection = new SqlConnection(strConnString);
+        connection.Open();
+        SqlCommand cmd = new SqlCommand("deletePdf", connection);
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@id", id);
+        cmd.ExecuteNonQuery();
+        BindDataList();
+        connection.Close();
     }
 }

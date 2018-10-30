@@ -62,16 +62,16 @@
 				<i class="rt-icon2-cross2"></i>
 			</span>
 		</button>
-		<div class="widget widget_search">
+		<!--<div class="widget widget_search">
 			<form method="get" class="searchform search-form form-inline" action="#">
 				<div class="form-group bottommargin_0">
 					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
 				</div>
-				<button type="submit" class="theme_button">Search</button>
+				<button type="submit" class="theme_button">Search</button>-->
 			</form>
 		</div>
 	</div>
-
+    <form runat="server">
 	<!-- Unyson messages modal -->
 	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
 		<div class="fw-messages-wrap ls with_padding">
@@ -96,31 +96,42 @@
 				<div class="container">
 					<div class="row">
 					<div class="col-sm-6 "  style="float:right;">									
-						<div class="form-group">
+					<!--	<div class="form-group">
 							<label for="mailchimp" class="sr-only">Search here</label>
 							<i class="flaticon-envelope icon2-"></i>
 							<input name="" type="search" id="mailchimp" class="mailchimp_email form-control" placeholder="Search">
 							<button type="submit" class="theme_button color1"><i class="fa fa-search"></i></button>
-						</div>
+						</div>--->
 					 </div>
 					  <div class="col-sm-6 text-center text-sm-right">
 							<ul class="inline-list menu darklinks">
-								<li>
-									<a href="#"><i class="fa fa-file"></i> My Content</a>
+									
+									<li>
+										<asp:LinkButton ID="mycontent" class="fa fa-upload" OnClick="mycontent_Click" runat="server" >MY CONTENT</asp:LinkButton>
 								</li>
-								<li>
-									<a href="#"><i class="fa fa-file"></i> My Classes</a>
-								</li>
+								
+								
 								<li>
 								  
+								<asp:LinkButton ID="Profile_link_button" class="fa fa-upload" OnClick="Profile_link_button_Click" runat="server">PROFILE</asp:LinkButton>
 							
 										</li>
 								
 								<li>
 									
 								   
-										
+										<asp:LinkButton ID="Upload_link_button" class="fa fa-upload" OnClick="Upload_link_button_Click" runat="server">UPLOAD</asp:LinkButton>
+									   
 								</li>
+								  
+							
+										
+								
+								
+									
+								   <li><a href="login-teacher.aspx" class="small-text medium"><i class="fa fa-sign-out"></i>Sign out</a></li>
+										
+								
 								<li><table>
 				<tr>
 				   <td>
@@ -148,22 +159,33 @@
 								<img src="images/logo.png" alt="">
 							</a>	
 								<ul class="nav menu-click">
-									<li class="active">
+									<li >
 								   
+									 <asp:LinkButton ID="Pdfnoteslink_btn"  OnClick="Pdfnoteslink_btn_Click" runat="server">TichEdu Pdf Notes</asp:LinkButton>
 								
 											</li>
 
 									<li>
-                                    
+                                        <asp:LinkButton ID="Youtube_linkbtn" OnClick="Youtube_linkbtn_Click" runat="server">TichEdu YouTube</asp:LinkButton>
 									</li>
 									<li>
-										<a href="">Exams</a>
+										<a href="AddQuestion.aspx">TichEdu Exams</a>
 									</li>
 									<li>
-										<a href="#">Task</a>
+										 <asp:LinkButton ID="youtube_videos_link" OnClick="youtube_videos_link_Click" runat="server">TichEdu YouTube Videos</asp:LinkButton>
 									</li>
 									<li>
-										<a href="#">View Class Room</a>
+										<g:sharetoclassroom url="http://url-to-share" size="32"></g:sharetoclassroom>
+                                        <asp:Label ID="Label1" runat="server" Text="Google Classroom"></asp:Label>
+									</li>
+                                    <li>
+										 <asp:LinkButton ID="Groupchat" OnClick="Groupchat_Click" runat="server">TichEdu Group Chat</asp:LinkButton>
+									</li>
+                                      <li>
+										 <asp:LinkButton ID="whiteboard" OnClick="whiteboard_Click" runat="server">TichEdu White Board</asp:LinkButton>
+									</li>
+                                     <li>
+										 <asp:LinkButton ID="studentactivity" OnClick="studentactivity_Click" runat="server">TichEdu Student Activity</asp:LinkButton>
 									</li>
 									<!-- eof pages -->
 								</ul>
@@ -172,9 +194,9 @@
 							
 <div class="container text-center">
 	<div class="row">
-		<div class="round hollow text-center">
-		<a href="#" id="addClass"><span class="glyphicon glyphicon-comment"></span> Open in chat </a>
-		</div>       
+	<!--	<div class="round hollow text-center">
+		<a href="#" id="addClass"><span class="glyphicon glyphicon-comment"></span>  </a>
+		</div>      ---> 
 	</div>
 </div>
 
@@ -292,13 +314,20 @@
 				</div>
 			</header>
 
-            <form runat="server">
+            
                 <div class="container">
                 <div class="jumbotron">
                     <p class="text-danger">Class</p>
                     <asp:DropDownList ID="Class_dropdown" CssClass="form-control" runat="server" OnSelectedIndexChanged="Class_dropdown_SelectedIndexChanged" AutoPostBack="true"  ></asp:DropDownList>
                     <p class="text-danger">Subject</p>
                     <asp:DropDownList ID="Subject_dropdown" CssClass="form-control" runat="server"></asp:DropDownList>
+
+                     <p class="text-danger">Image Upload</p>
+                    <asp:FileUpload ID="img_upload" CssClass="form-control" runat="server" />
+
+
+
+
                     <p class="text-danger">Exam name</p>
                     <asp:DropDownList ID="Exam_drop" runat="server" CssClass="form-control"></asp:DropDownList>
                     <p class="text-danger">Question</p>
@@ -337,7 +366,7 @@
 		<!-- eof #box_wrapper -->
 	</div>
 	<!-- eof #canvas -->
-
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/custom.js"></script>

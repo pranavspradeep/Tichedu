@@ -145,29 +145,32 @@
 								<ul class="nav menu-click">
 									<li >
 								   
-									 <asp:LinkButton ID="Pdfnoteslink_btn"  OnClick="Pdfnoteslink_btn_Click" runat="server">Pdf Notes</asp:LinkButton>
+									 <asp:LinkButton ID="Pdfnoteslink_btn"  OnClick="Pdfnoteslink_btn_Click" runat="server">TichEdu Pdf Notes</asp:LinkButton>
 								
 											</li>
 
 									<li>
-                                        <asp:LinkButton ID="Youtube_linkbtn" OnClick="Youtube_linkbtn_Click" runat="server">YouTube</asp:LinkButton>
+                                        <asp:LinkButton ID="Youtube_linkbtn" OnClick="Youtube_linkbtn_Click" runat="server">TichEdu YouTube</asp:LinkButton>
 									</li>
 									<li>
-										<a href="AddQuestion.aspx">Exams</a>
+										<a href="AddQuestion.aspx">TichEdu Exams</a>
 									</li>
 									<li>
-										 <asp:LinkButton ID="youtube_videos_link" OnClick="youtubevideos_Click" runat="server">YouTube Videos</asp:LinkButton>
+										 <asp:LinkButton ID="youtube_videos_link" OnClick="youtubevideos_Click" runat="server">TichEdu YouTube Videos</asp:LinkButton>
 									</li>
 									<li>
 										<g:sharetoclassroom url="http://url-to-share" size="32"></g:sharetoclassroom>
                                         <asp:Label ID="Label1" runat="server" Text="Google Classroom"></asp:Label>
 									</li>
                                     <li>
-										 <asp:LinkButton ID="Groupchat" OnClick="Groupchat_Click" runat="server">Group Chat</asp:LinkButton>
+										 <asp:LinkButton ID="Groupchat" OnClick="Groupchat_Click" runat="server">TichEdu Group Chat</asp:LinkButton>
 									</li>
                                       <li>
-										 <asp:LinkButton ID="whiteboard" OnClick="whiteboard_Click" runat="server">White Board</asp:LinkButton>
+										 <asp:LinkButton ID="whiteboard" OnClick="whiteboard_Click" runat="server">TichEdu White Board</asp:LinkButton>
 									</li>
+                                     <li>
+<asp:LinkButton ID="studentactivity" OnClick="studentactivity_Click" runat="server">TichEdu Student Activity</asp:LinkButton>
+</li>
 									<!-- eof pages -->
 								</ul>
 							</nav>
@@ -316,7 +319,9 @@
 
                                  <div class="p-3 mb-2 bg-danger text-white ">VIDEO FRO CLASS:<%# Eval("YOUTUBE_CLASS") %></div>    
                                 <div class="p-3 mb-2 bg-danger text-white ">SUBJECT:<%# Eval("YOUTUBE_SUBJECT") %></div>
-
+                              
+                                  <asp:LinkButton ID="delete" OnClick="delete_Click"  CommandArgument='<%# Eval("YOU_ID") %>'   runat="server">DELETE</asp:LinkButton>
+                          
 
                           </div>
           

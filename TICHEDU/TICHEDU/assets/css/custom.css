@@ -1,0 +1,260 @@
+.navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.navbar {
+    border-radius: 0;
+	height: 90px;
+	margin-bottom: 0px;
+	box-shadow: 5px 0px 15px 0px #888888;
+}
+
+.navbar-nav{
+margin-top:15px;}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	background-color:#fff;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+	background-color:#fff;
+	border-bottom:4px solid transparent;
+	text-align:center;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: #e96969;
+    background-color: #fff;
+	border-bottom:4px solid transparent;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #e96969;
+    background-color: #fff;
+	border-bottom:4px solid #e96969;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+}
+
+.h1, .h2, .h3, h4, .h5, .h6, .p, h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+	padding:20px;
+}
+
+.h1 > span, .h2 > span, .h3 > span, h4 > span, .h5 > span, .h6 > span, .p > span, h1 > span, h2 > span, h3 > span, h4 > span, h5 > span, h6 > span, p > span {
+color:#e96969;}
+section {
+background-color:#fff;
+padding:20px;}
+
+
+.slcp h3 { background-color:#e96969; padding:10px; font-size:24px; font-weight:500; float:right; width:50%; border-radius:10px;}
+.slcp p { color:#fff;  font-size:14px; font-weight:300; float:right; width:50%;}
+.vam {padding: 5% 0;}
+
+
+.cra{
+text-align:center;
+background-color:#444444;
+color:#fff;
+padding:5px;}
+
+.cra a{
+text-align:center;
+text-decoration:none;
+color:#fff;}
+
+
+.nwet {padding:0; background-color:#CCCCCC;}
+section { padding:40px 0;}
+.nwss { border:2px solid #0441a3; border-radius:20px; padding:20px; background-color:#bf1c1c; margin-top:40px;}
+.nwss  h3 { text-align:center; color:#bf1c1c; background-color:#fff; border-radius:10px;}
+.nwsul li {list-style-type:none;}
+.nwsul a { color: #fff;padding:20px 0; list-style-type:none; text-decoration:none;}
+.nwsul a:hover { color:#ff8484;}
+
+.bgash{background-color: #f2f2f2;}
+
+.drbg1{ background-image:url("../images/bgpt.png"); background-attachment:fixed; background-color:#e96969;}
+
+.drbg1 h1,.drbg1 ,.drbg1 h3,.drbg1 h4,.drbg1 h5,.drbg1 h6,.drbg1 p  { color:#fff;}
+
+marquee h4 { text-align:center;}
+
+
+@media screen and (max-width: 600px){
+.lgtpi { width: 100%; padding-right:50px;}
+}
+
+
+    .event-list {
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+	}
+	.event-list > li {
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0px 0px 5px rgb(51, 51, 51);
+		box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+		padding: 0px;
+		margin: 0px 0px 20px;
+	}
+	.event-list > li > time {
+		display: inline-block;
+		width: 100%;
+		color: rgb(255, 255, 255);
+		background-color: #ff8484;
+		padding: 5px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.event-list > li:nth-child(even) > time {
+		background-color: #bf1c1c;
+	}
+	.event-list > li > time > span {
+		display: none;
+	}
+	.event-list > li > time > .day {
+		display: block;
+		font-size: 25pt;
+		font-weight: 100;
+		line-height: 1;
+	}
+	.event-list > li time > .month {
+		display: block;
+		font-size: 18pt;
+		font-weight: 900;
+		line-height: 1;
+	}
+	.event-list > li > img {
+		width: 100%;
+	}
+	.event-list > li > .info {
+		padding-top: 5px;
+		text-align: center;
+	}
+	.event-list > li > .info > .title {
+		font-size: 14pt;
+		font-weight: 700;
+		margin: 0px;
+	}
+	.event-list > li > .info > .desc {
+		font-size: 10pt;
+		font-weight: 300;
+		margin: 0px;
+	}
+	.event-list > li > .info > ul,
+	.event-list > li > .social > ul {
+		display: table;
+		list-style: none;
+		margin: 10px 0px 0px;
+		padding: 0px;
+		width: 100%;
+		text-align: center;
+	}
+	.event-list > li > .social > ul {
+		margin: 0px;
+	}
+	.event-list > li > .info > ul > li,
+	.event-list > li > .social > ul > li {
+		display: table-cell;
+		cursor: pointer;
+		color: rgb(30, 30, 30);
+		font-size: 11pt;
+		font-weight: 300;
+        padding: 3px 0px;
+	}
+    .event-list > li > .info > ul > li > a {
+		display: block;
+		width: 100%;
+		color: rgb(30, 30, 30);
+		text-decoration: none;
+	} 
+    .event-list > li > .social > ul > li {    
+        padding: 0px;
+    }
+    .event-list > li > .social > ul > li > a {
+        padding: 3px 0px;
+	} 
+	.event-list > li > .info > ul > li:hover,
+	.event-list > li > .social > ul > li:hover {
+		color: rgb(30, 30, 30);
+		background-color: rgb(200, 200, 200);
+	}
+	
+	@media (min-width: 768px) {
+		.event-list > li {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 120px;
+			padding: 0px;
+			border-radius:10px;
+		}
+		.event-list > li > time,
+		.event-list > li > img  {
+			display: inline-block;
+			border-radius:10px;
+		}
+		.event-list > li > time,
+		.event-list > li > img {
+			width: 120px;
+			float: left;
+		}
+		.event-list > li > .info {
+			background-color: #fff;
+			overflow: hidden;
+		}
+		.event-list > li > time,
+		.event-list > li > img {
+			width: 120px;
+			height: 120px;
+			padding: 20px;
+			margin: 0px;
+		}
+		.event-list > li > .info {
+			position: relative;
+			height: 120px;
+			text-align: left;
+			border-radius:10px;
+		}	
+		.event-list > li > .info > .title, 
+		.event-list > li > .info > .desc {
+			padding: 0px 10px;
+		}
+		.event-list > li > .info > ul {
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+		}
+		.event-list > li > .social {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			display: block;
+			width: 40px;
+		}
+        .event-list > li > .social > ul {
+            border-left: 1px solid rgb(230, 230, 230);
+        }
+		.event-list > li > .social > ul > li {			
+			display: block;
+            padding: 0px;
+		}
+		.event-list > li > .social > ul > li > a {
+			display: block;
+			width: 40px;
+			padding: 10px 0px 9px;
+		}
+	}
+	
+	.drbg1 .info p { color:#0441a3;}	.drbg1 .info .title { color:#58575d;}
+	
+	
+
+

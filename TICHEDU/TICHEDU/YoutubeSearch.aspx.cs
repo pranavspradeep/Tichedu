@@ -25,9 +25,12 @@ public partial class YoutubeSearchqa : System.Web.UI.Page
 
 
 
+    protected void studentactivity_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("teacher_Result.aspx/?teacher=" + userkey);
+    }
 
 
-    
 
     protected void Upload_link_button_Click(object sender, EventArgs e)
     {

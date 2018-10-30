@@ -14,7 +14,7 @@ public class DBConnect
 
     public void CreateConnection()
     {
-        myCon = new SqlConnection("Data Source=AG102;Initial Catalog=TICHEDU;Integrated Security=True");
+        myCon = new SqlConnection("Data Source=AG102;Initial Catalog=TichEdu;Integrated Security=True");
         myCon.Open();
 
     }

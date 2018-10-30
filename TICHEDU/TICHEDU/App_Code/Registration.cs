@@ -33,7 +33,7 @@ public class Registration
 "<li>Discussions</li>"+
   "  </ol>"+
 
-"<p> You can contact us anytime by emailing at tichedu18@gmail.com/ info@tichedu.com</p>"+
+"<p> You can contact us anytime by emailing at TichEdu18@gmail.com/ info@TichEdu.com</p>"+
 
 "<p>"+
  " We look forward to being with you on this beautiful maths journey.  </p>"+
@@ -44,7 +44,7 @@ public class Registration
 "<p>TichEdu Team</p>"+
 
 "<p>"+
- " info@tichedu.com/tichedu18@gmail.com"+
+ " info@TichEdu.com/TichEdu18@gmail.com"+
    " </p>"+
   "</body>"+
 "</html>";
@@ -71,7 +71,7 @@ public class Registration
 
 
         string smtpServer = "localhost";
-        string userName = "info@tichedu.com";
+        string userName = "info@TichEdu.com";
         string password = "tich@2018";
         int cdoBasic = 1;
         int cdoSendUsingPort = 2;
@@ -80,14 +80,14 @@ public class Registration
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpserverport", 25);
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusing", cdoSendUsingPort);
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate", cdoBasic);
-        msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", "info@tichedu.com");
+        msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", "info@TichEdu.com");
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendpassword", "tich@2018");
         msg.To = email;
         msg.Bcc = "anishpr2k3@gmail.com";
-        msg.From = "info@tichedu.com";
+        msg.From = "info@TichEdu.com";
         msg.Priority = MailPriority.High;
         msg.BodyFormat = MailFormat.Html;
-        msg.Subject = name + " Welcome to Tichedu.com";
+        msg.Subject = name + " Welcome to TichEdu.com";
         msg.Body = s;
         SmtpMail.SmtpServer = smtpServer;
         SmtpMail.Send(msg);
@@ -102,11 +102,11 @@ public class Registration
 "Your username is"+ email + " and the password is"+ userpassword + " <br><br>"+
 "Thank you for your interest in TichEdu learning and congratulations you have been registered as a tutor.<br> Once our background check is completed you will be able to access students, view, use and add materials."+
 "Our vision is to provide a world class learning platform with material that instigates a problem solving mentality.We believe that learning is dynamic and imploring new methods and techniques will change the classroom experiences for our student.At TichEdu, we believe you are committed to offer the best to our student and hope you will always demonstrate the best practices.<br>"+
-"You can contact us anytime by emailing at tichedu18 @gmail.com/ info @tichedu.com<br>"+
+"You can contact us anytime by emailing at TichEdu18 @gmail.com/ info @TichEdu.com<br>"+
 "We look forward to being with you <br><br>"+
 "Sincerely<br>"+
 "<p>TichEdu Team</p>"+
-"<p>info@tichedu.com/tichedu18@gmail.com</p>"+
+"<p>info@TichEdu.com/TichEdu18@gmail.com</p>"+
  "</body>" +
    " </html>";
 
@@ -132,7 +132,7 @@ public class Registration
 
 
        string smtpServer = "localhost";
-        string userName = "info@tichedu.com";
+        string userName = "info@TichEdu.com";
         string password = "tich@2018";
         int cdoBasic = 1;
         int cdoSendUsingPort = 2;
@@ -141,14 +141,14 @@ public class Registration
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpserverport", 25);
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusing", cdoSendUsingPort);
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate", cdoBasic);
-        msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", "info@tichedu.com");
+        msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", "info@TichEdu.com");
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendpassword", "tich@2018");
         msg.To = email;
         msg.Bcc = "anishpr2k3@gmail.com";
-        msg.From = "info@tichedu.com";
+        msg.From = "info@TichEdu.com";
         msg.Priority = MailPriority.High;
         msg.BodyFormat = MailFormat.Html;
-        msg.Subject = name + " Welcome to Tichedu.com";
+        msg.Subject = name + " Welcome to TichEdu.com";
         msg.Body = s;
         SmtpMail.SmtpServer = smtpServer;
         SmtpMail.Send(msg);
@@ -168,11 +168,11 @@ public class Registration
          
             " <p> Our vision is to provide a world class learning platform with material that instigates a problem solving mentality. </p>"+
 "<p>We believe that learning is dynamic and imploring new methods and techniques will change the classroom experiences for our student.</p><p> At TichEdu, we believe you are committed to the progress of your child.TichEdu team will constantly give you news, update and summary of your child’s activities.</p>"+
-"<p>You can contact us anytime by emailing at tichedu18 @gmail.com/ info @tichedu.com</p>"+
+"<p>You can contact us anytime by emailing at TichEdu18 @gmail.com/ info @TichEdu.com</p>"+
 "<p>We look forward to being with you</p>"+
 "<p>Sincerely</p>"+
 "<p>TichEdu Team </p>"+
-"<p>info@tichedu.com/tichedu18@gmail.com</p>"+
+"<p>info@TichEdu.com/TichEdu18@gmail.com</p>"+
 
  "</body>"+
 "</html>";
@@ -199,7 +199,7 @@ public class Registration
 
 
         string smtpServer = "localhost";
-        string userName = "info@tichedu.com";
+        string userName = "info@TichEdu.com";
         string password = "tich@2018";
         int cdoBasic = 1;
         int cdoSendUsingPort = 2;
@@ -208,14 +208,14 @@ public class Registration
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpserverport", 25);
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusing", cdoSendUsingPort);
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate", cdoBasic);
-        msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", "info@tichedu.com");
+        msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", "info@TichEdu.com");
         msg.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendpassword", "tich@2018");
         msg.To = email;
         msg.Bcc = "anishpr2k3@gmail.com";
-        msg.From = "info@tichedu.com";
+        msg.From = "info@TichEdu.com";
         msg.Priority = MailPriority.High;
         msg.BodyFormat = MailFormat.Html;
-        msg.Subject = name + " Welcome to Tichedu.com";
+        msg.Subject = name + " Welcome to TichEdu.com";
         msg.Body = s;
         SmtpMail.SmtpServer = smtpServer;
         SmtpMail.Send(msg);

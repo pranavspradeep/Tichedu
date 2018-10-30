@@ -17,7 +17,7 @@ public partial class teachergroupchat : System.Web.UI.Page
     public string userkey { set; get; }
     string clientid = "556887803694-s1iakv1ep16bgvupkp3suh2jc549922j.apps.googleusercontent.com";
     string clientsecret = "hE1s29hJqp2u-p4yLefbZWHb";
-    string redirection_url = "http://www.tichedu.com/student.aspx";
+    string redirection_url = "http://www.TichEdu.com/student.aspx";
     string url = "https://accounts.google.com/o/oauth2/token";
     public class Tokenclass
     {
@@ -126,6 +126,10 @@ public partial class teachergroupchat : System.Web.UI.Page
         Session["userid"] = userinfo.id;
         // hylprofile.NavigateUrl = userinfo.link;
 
+    }
+    protected void studentactivity_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("teacher_Result.aspx/?teacher=" + userkey);
     }
     private void videosearch()
     {
